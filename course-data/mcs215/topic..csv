@@ -1,0 +1,9 @@
+Topic,Subtopic,Learning Order,Estimated Hours
+Fundamentals of Digital & Cyber Security,"Pros & Cons of Digital Security, Principles of Data Security (Confidentiality, Integrity, Availability, Authentication), Security Audit & Policy",1,3.5
+Cyber Security Threats & Issues,"Common Threats, DDoS, Malware, Phishing, Cryptojacking, Cyber-Physical Attacks, Technical Countermeasures",2,4.5
+Cryptography & Cryptographic Techniques,"Cryptography Functions, Ciphers (Substitution & Transposition), Symmetric-Key & Public-Key Encryption, RSA Algorithm, Digital Signatures & Certificates, Steganography",3,7
+Security Management,"Need for Security Management, Principles of Security Management",4,2.5
+Cyber Crimes & Specific Online Issues,"Classification of Cyber Crimes, Linking, Inlining, Framing, Search Engine Infringements",5,3.5
+Cyber Forensics,"Cyber Forensics Overview, Preservation of Digital Evidence, Cyber Forensic Investigation Tools",6,3.5
+Regulation of Cyberspace & Cyber Laws,"Need & Strategies for Cyberspace Regulation, IT Act Provisions (Section 43 & Compensation), Network Service Provider Liability, UNCITRAL Model Law, Foreign Cyber Laws (UK), Filtering Devices & Rating Systems",7,6
+Intellectual Property Rights (IPR),"Forms of IPR, Copyrights & Universal Copyright Convention, Patents & Patent Misuse, Trademarks & Domain Name Disputes, Remedies for IPR Infringement",8,5

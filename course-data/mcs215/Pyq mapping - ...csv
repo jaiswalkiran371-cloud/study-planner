@@ -1,0 +1,72 @@
+Term / Paper,Question,Topic,Subtopic,Marks
+Dec 2025,Q1(c) Five common security issues in cyberspace,Cyber Security Threats & Issues,Common Threats,5
+Dec 2025,Q2(a) Intrusion Detection System,Cyber Security Threats & Issues,Technical Countermeasures,5
+Dec 2025,Q2(b) Malwares,Cyber Security Threats & Issues,Malwares,5
+Dec 2025,Q3(a) Steganography and its applications,Cryptography & Cryptographic Techniques,Steganography,6
+Dec 2025,Q3(b) Four advantages of Symmetric-Key Cryptography,Cryptography & Cryptographic Techniques,Symmetric-Key Cryptography,4
+Dec 2025,Q4 Need & five principles of security management,Security Management,Principles of Security Management,10
+Dec 2025,Q5 Circumstances for compensation under IT Act,Regulation of Cyberspace & Cyber Laws,IT Act Provisions & Liability,10
+June 2025,Q1(a) Two types of ciphers with examples,Cryptography & Cryptographic Techniques,Ciphers,6
+June 2025,Q1(b) Four advantages & disadvantages of digital security,Fundamentals of Digital & Cyber Security,Pros & Cons of Digital Security,4
+June 2025,Q1(c) Three cyber security threats related to data privacy,Cyber Security Threats & Issues,Threats & Data Privacy,6
+June 2025,Q1(d) Filtering devices and rating systems,Regulation of Cyberspace & Cyber Laws,Filtering & Rating Systems,4
+June 2025,Q2 Provisions of IT Act to regulate cyberspace,Regulation of Cyberspace & Cyber Laws,IT Act Provisions & Liability,10
+June 2025,Q3(a) Liability of Network Service Providers,Regulation of Cyberspace & Cyber Laws,Service Provider Liability,5
+June 2025,Q3(b) Cyber Forensic Investigation tools,Cyber Forensics,Cyber Forensic Tools,5
+June 2025,Q4(a) Cyber Forensic: Preservation of Digital Evidence,Cyber Forensics,Evidence Preservation,5
+June 2025,Q4(b) Universal Copyright Convention,Intellectual Property Rights (IPR),Copyrights & Conventions,5
+June 2025,Q5 Five forms of Intellectual Property,Intellectual Property Rights (IPR),Forms of IPR,10
+Dec 2024,Q1(a) Trademark issues,Intellectual Property Rights (IPR),Trademarks,5
+Dec 2024,Q1(b) Remedies for infringement of IPR,Intellectual Property Rights (IPR),IPR Remedies,5
+Dec 2024,Q1(c) Liability of service providers,Regulation of Cyberspace & Cyber Laws,Service Provider Liability,5
+Dec 2024,Q1(d) Regulation of Cyberspace in United Kingdom,Regulation of Cyberspace & Cyber Laws,Foreign Cyber Laws,5
+Dec 2024,Q2 Challenges to cyber security & technical solutions,Cyber Security Threats & Issues,Challenges & Solutions,10
+Dec 2024,Q3 Encryption and RSA algorithm with example,Cryptography & Cryptographic Techniques,RSA Algorithm,10
+Dec 2024,Q4 Core elements of data security,Fundamentals of Digital & Cyber Security,Principles of Data Security,10
+Dec 2024,Q5 Note on Cyber Forensics,Cyber Forensics,Cyber Forensics Overview,10
+June 2024,Q1(a) Benefits of digital security,Fundamentals of Digital & Cyber Security,Pros & Cons of Digital Security,5
+June 2024,Q1(b) Key functions of cryptography,Cryptography & Cryptographic Techniques,Cryptography Functions,5
+June 2024,Q1(c) Patent misuse,Intellectual Property Rights (IPR),Patents,5
+June 2024,"Q1(d) UNCITRAL Model Law, 1996",Regulation of Cyberspace & Cyber Laws,UNCITRAL Model Law,5
+June 2024,Q2 Security issues emerging in Cyberspace,Cyber Security Threats & Issues,Common Threats,10
+June 2024,Q3 Symmetric key vs Public key encryption,Cryptography & Cryptographic Techniques,Encryption Schemes,10
+June 2024,Q4 Six principles of security management,Security Management,Principles of Security Management,10
+June 2024,Q5 Person liable to pay damages under Sec 43 IT Act,Regulation of Cyberspace & Cyber Laws,IT Act Provisions & Liability,10
+Dec 2023,Q1(a) Transposition cipher with example,Cryptography & Cryptographic Techniques,Ciphers,5
+Dec 2023,Q1(b) Data security: Confidentiality and availability,Fundamentals of Digital & Cyber Security,Principles of Data Security,5
+Dec 2023,Q1(c) Liabilities of network service providers,Regulation of Cyberspace & Cyber Laws,Service Provider Liability,5
+Dec 2023,Q1(d) Search engine trademark infringements,Intellectual Property Rights (IPR),Trademarks,5
+Dec 2023,"Q2 DDoS, Malware, Cryptojacking, Attacks, Phishing",Cyber Security Threats & Issues,Common Threats,10
+Dec 2023,Q3(a) Pros & cons of symmetric-key cryptography,Cryptography & Cryptographic Techniques,Symmetric-Key Cryptography,5
+Dec 2023,"Q3(b) Email security, Anti-virus, Access security",Fundamentals of Digital & Cyber Security,Security Measures,5
+Dec 2023,Q4(a) Needs of regulating cyberspace,Regulation of Cyberspace & Cyber Laws,Cyberspace Regulation,5
+Dec 2023,Q4(b) Filtering devices and rating systems,Regulation of Cyberspace & Cyber Laws,Filtering & Rating Systems,5
+Dec 2023,"Q5 Forensic, Crime classification, Domain names, Framing",Cyber Crimes & Specific Online Issues,Cyber Crime Classification,10
+June 2023,Q1(a) Five security issues in cyberspace,Cyber Security Threats & Issues,Common Threats,5
+June 2023,Q1(b) Three governing principles of data security,Fundamentals of Digital & Cyber Security,Principles of Data Security,6
+June 2023,Q1(c) Two strategies of regulating the Internet,Regulation of Cyberspace & Cyber Laws,Cyberspace Regulation,4
+June 2023,Q1(d) Intellectual Property: Copyrights & Patents,Intellectual Property Rights (IPR),Forms of IPR,5
+June 2023,"Q2(a) Solutions for Unauthorized access, Malware, Phishing",Cyber Security Threats & Issues,Technical Countermeasures,5
+June 2023,Q2(b) Cryptography use & Substitution cipher example,Cryptography & Cryptographic Techniques,Ciphers,5
+June 2023,Q3(a) Digital signature and digital certificates,Cryptography & Cryptographic Techniques,Digital Signatures & Certificates,5
+June 2023,Q3(b) Security audit & Security policy,Fundamentals of Digital & Cyber Security,Security Audit & Policy,5
+June 2023,Q4(a) Filtering devices & Indian content regulation,Regulation of Cyberspace & Cyber Laws,Filtering & Rating Systems,5
+June 2023,Q4(b) Cyber crime categories vs traditional crime,Cyber Crimes & Specific Online Issues,Cyber Crime Classification,5
+June 2023,Q5(a) Cyber forensics definition & example,Cyber Forensics,Cyber Forensics Overview,5
+June 2023,Q5(b) Trademark & remedies against infringement,Intellectual Property Rights (IPR),Trademarks & Remedies,5
+Dec 2022,Q1(a) Data Management,Fundamentals of Digital & Cyber Security,Security Measures,5
+Dec 2022,Q1(b) Copyright and Related Rights,Intellectual Property Rights (IPR),Copyrights & Conventions,5
+Dec 2022,Q1(c) Advantages of Public Key Cryptography,Cryptography & Cryptographic Techniques,Public-Key Cryptography,5
+Dec 2022,Q1(d) Need for Regulation of Cyberspace,Regulation of Cyberspace & Cyber Laws,Cyberspace Regulation,5
+Dec 2022,Q2 Security issues in Cyberspace,Cyber Security Threats & Issues,Common Threats,10
+Dec 2022,Q3 Note on Cyber Forensics,Cyber Forensics,Cyber Forensics Overview,10
+Dec 2022,Q4 Overview of Cyberspace regulation in India,Regulation of Cyberspace & Cyber Laws,IT Act Provisions & Liability,10
+Dec 2022,Q5 Six principles of Security Management,Security Management,Principles of Security Management,10
+June 2022,Q1(a) Digital Signature,Cryptography & Cryptographic Techniques,Digital Signatures & Certificates,5
+June 2022,Q1(b) Pros and Cons of Digital Security,Fundamentals of Digital & Cyber Security,Pros & Cons of Digital Security,5
+June 2022,Q1(c) Cyber Security Threats,Cyber Security Threats & Issues,Common Threats,5
+June 2022,Q1(d) UNCITRAL Model Law,Regulation of Cyberspace & Cyber Laws,UNCITRAL Model Law,5
+June 2022,"Q2 Issues arising due to Linking, Inlining and Framing",Cyber Crimes & Specific Online Issues,"Linking, Inlining & Framing",10
+June 2022,Q3 Liability to pay damages under IT Act 2000,Regulation of Cyberspace & Cyber Laws,IT Act Provisions & Liability,10
+June 2022,Q4 Authentication as an information security objective,Fundamentals of Digital & Cyber Security,Principles of Data Security,10
+June 2022,Q5 Various data security measures,Fundamentals of Digital & Cyber Security,Security Measures,10
