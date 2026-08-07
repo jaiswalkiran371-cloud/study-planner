@@ -45,3 +45,29 @@ class PYQQuestion(models.Model):
 
     class Meta:
         db_table = 'pyq_question'
+
+from django.contrib.auth.models import User
+
+class StudentProfile(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    programme = models.CharField(max_length=100, default='MCA')
+    semester = models.IntegerField(default=1)
+
+    class Meta:
+        db_table = 'student_profile'
+
+    def __str__(self):
+        return self.user.username
+
+
+class UserCourseRating(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    course = models.ForeignKey(Course, on_delete=models.CASCADE)
+    rating = models.IntegerField()
+
+    class Meta:
+        db_table = 'user_course_rating'
+        unique_together = ('user', 'course')
+
+    def __str__(self):
+        return f"{self.user.username} - {self.course.course_code}: {self.rating}"

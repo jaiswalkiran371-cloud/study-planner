@@ -1,0 +1,11 @@
+<h1>Rate Your Courses (0 = very weak, 10 = very strong)</h1>
+<form method="post">
+    {% csrf_token %}
+    {% for course in courses %}
+        <p>
+            {{ course.course_name }}:
+            <input type="number" name="rating_{{ course.id }}" min="0" max="10" required>
+        </p>
+    {% endfor %}
+    <button type="submit">Save & Continue</button>
+</form>
