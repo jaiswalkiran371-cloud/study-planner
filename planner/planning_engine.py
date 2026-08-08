@@ -1,7 +1,28 @@
 from datetime import date
 from .models import PlanSetting
 from .models import Topic, PYQQuestion, PlanSetting
+from .models import Topic, TopicDependency
 
+
+def get_prerequisites(topic):
+    """Returns a list of Topic objects that must come before this one."""
+    deps = TopicDependency.objects.filter(topic=topic).select_related('prerequisite_topic')
+    return [d.prerequisite_topic for d in deps]
+
+
+def is_eligible(topic, completed_or_scheduled_topic_ids):
+    """
+    A topic is eligible if every one of its prerequisites is already
+    in the completed/scheduled set.
+    """
+    prereqs = get_prerequisites(topic)
+    return all(p.id in completed_or_scheduled_topic_ids for p in prereqs)
+
+
+def get_eligible_topics(course, completed_or_scheduled_topic_ids):
+    """Returns all topics for a course that are currently eligible to schedule."""
+    all_topics = Topic.objects.filter(course=course)
+    return [t for t in all_topics if is_eligible(t, completed_or_scheduled_topic_ids)]
 
 def calculate_difficulty_score(student_rating):
     """Section 11.4: difficulty = 10 - rating"""
@@ -70,3 +91,20 @@ def calculate_time_budget(exam_date, daily_hours, today=None):
         'learning_hours': round(learning_hours, 2),
         'revision_percent': revision_percent,
     }
+
+
+def rank_eligible_topics(course, completed_or_scheduled_topic_ids, student_rating):
+    """
+    Returns eligible topics sorted by priority score (descending),
+    with learning_order as the tie-breaker (ascending — lower order = earlier).
+    """
+    eligible = get_eligible_topics(course, completed_or_scheduled_topic_ids)
+
+    scored = []
+    for t in eligible:
+        priority = calculate_priority_score(t, student_rating)
+        scored.append((priority, t.learning_order, t))
+
+    scored.sort(key=lambda x: (-x[0], x[1]))
+
+    return [t for (priority, order, t) in scored]
