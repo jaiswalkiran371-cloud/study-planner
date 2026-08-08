@@ -1,7 +1,18 @@
 <h1>Your Study Plan — Day View</h1>
 <p>Exam date: {{ plan.exam_date }}</p>
 <a href="{% url 'plan_week_view' plan.id %}">Switch to Week View</a>
+{% if messages %}
+<ul>
+{% for message in messages %}
+    <li>{{ message }}</li>
+{% endfor %}
+</ul>
+{% endif %}
 
+<form method="post" action="{% url 'regenerate_plan' plan.id %}">
+    {% csrf_token %}
+    <button type="submit">Reschedule Missed Work</button>
+</form>
 {% for day, sessions in grouped.items %}
     <h3>{{ day }}</h3>
     <ul>

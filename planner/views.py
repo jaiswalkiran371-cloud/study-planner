@@ -11,6 +11,7 @@ from collections import defaultdict
 from datetime import timedelta
 from django.views.decorators.http import require_POST
 from django.shortcuts import get_object_or_404
+from django.contrib import messages
 
 def home(request):
     return render(request, 'planner/home.html')
@@ -203,3 +204,17 @@ def progress_view(request, plan_id):
         'percent_complete': percent_complete,
         'course_progress': course_progress,
     })
+from .planning_engine import regenerate_plan
+
+@login_required
+@require_POST
+def regenerate_plan_view(request, plan_id):
+    plan = Plan.objects.get(id=plan_id, user=request.user)
+    result = regenerate_plan(plan)
+
+    if result['shortage_hours'] > 0:
+        messages.warning(request, f"Warning: {result['shortage_hours']}h of work couldn't fit before your exam date.")
+    elif result['rescheduled_count'] > 0:
+        messages.success(request, f"Rescheduled {result['rescheduled_count']} session(s).")
+
+    return redirect('plan_day_view', plan_id=plan.id)

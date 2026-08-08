@@ -3,7 +3,7 @@ from .models import PlanSetting
 from .models import Topic, PYQQuestion, PlanSetting
 from .models import Topic, TopicDependency
 from datetime import timedelta
-
+from .models import PlanSetting, Topic, PYQQuestion, TopicDependency, StudySession, UserCourseRating
 
 def generate_schedule(course, student_rating, exam_date, daily_hours, start_date=None):
     """
@@ -191,3 +191,82 @@ def mark_overdue_sessions_as_missed(plan):
     )
     count = overdue.update(status='missed')
     return count
+
+def regenerate_plan(plan):
+    """
+    Reallocates missed and pending-future work across remaining days.
+    Completed sessions are never touched. Returns a dict summary.
+    """
+    today = date_cls.today()
+
+    # Step 1: find missed sessions (unfinished work to reschedule)
+    missed_sessions = StudySession.objects.filter(plan=plan, status='missed')
+
+    if not missed_sessions.exists():
+        return {'rescheduled_count': 0, 'shortage_hours': 0}
+
+    # Step 3: remaining days between today and exam
+    remaining_days = (plan.exam_date - today).days
+    if remaining_days <= 0:
+        return {'rescheduled_count': 0, 'shortage_hours': sum(float(s.duration) for s in missed_sessions), 'error': 'No days remaining before exam.'}
+
+    # Step 4: group missed hours back by topic (Step 4 of spec: "return unfinished blocks to queue")
+    from collections import defaultdict
+    unfinished_by_topic = defaultdict(float)
+    for s in missed_sessions:
+        unfinished_by_topic[s.topic_id] += float(s.duration)
+
+    # Step 6: find existing future capacity already used, to know what's free per day
+    future_sessions = StudySession.objects.filter(
+        plan=plan, date__gte=today
+    ).exclude(status='completed')
+    daily_used = defaultdict(float)
+    for s in future_sessions:
+        daily_used[s.date] += float(s.duration)
+
+    daily_capacity = float(plan.daily_hours)
+
+    # Step 5: prioritize which topic's missed hours go first
+    from .models import Topic
+    topics_by_priority = []
+    for topic_id, hours in unfinished_by_topic.items():
+        topic = Topic.objects.get(id=topic_id)
+        rating_obj = UserCourseRating.objects.filter(user=plan.user, course=topic.course).first()
+        rating = rating_obj.rating if rating_obj else 5
+        priority = calculate_priority_score(topic, rating)
+        topics_by_priority.append((priority, topic, hours))
+    topics_by_priority.sort(key=lambda x: -x[0])
+
+    # Delete the old missed session rows -- they're being replaced by new ones
+    missed_sessions.delete()
+
+    rescheduled_count = 0
+    shortage_hours = 0
+
+    for priority, topic, hours_needed in topics_by_priority:
+        remaining_to_place = hours_needed
+        check_date = today
+
+        while remaining_to_place > 0 and check_date <= plan.exam_date:
+            used = daily_used[check_date]
+            free = daily_capacity - used
+
+            if free > 0:
+                block = min(MAX_BLOCK_HOURS, remaining_to_place, free)
+                block = round(block, 2)
+                StudySession.objects.create(
+                    plan=plan, topic=topic, date=check_date,
+                    duration=block, session_type='learning',
+                    status='rescheduled'
+                )
+                daily_used[check_date] += block
+                remaining_to_place -= block
+                rescheduled_count += 1
+
+            check_date += timedelta(days=1)
+
+        if remaining_to_place > 0:
+            # Step 9: couldn't fit everything before the exam
+            shortage_hours += remaining_to_place
+
+    return {'rescheduled_count': rescheduled_count, 'shortage_hours': round(shortage_hours, 2)}
