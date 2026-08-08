@@ -71,3 +71,15 @@ class UserCourseRating(models.Model):
 
     def __str__(self):
         return f"{self.user.username} - {self.course.course_code}: {self.rating}"
+
+class PlanSetting(models.Model):
+    importance_weight = models.DecimalField(max_digits=3, decimal_places=2, default=0.40)
+    difficulty_weight = models.DecimalField(max_digits=3, decimal_places=2, default=0.35)
+    frequency_weight = models.DecimalField(max_digits=3, decimal_places=2, default=0.25)
+    revision_percent = models.DecimalField(max_digits=4, decimal_places=1, default=20.0)
+
+    class Meta:
+        db_table = 'plan_setting'
+
+    def __str__(self):
+        return f"Settings (revision={self.revision_percent}%)"

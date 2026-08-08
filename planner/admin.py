@@ -1,5 +1,7 @@
 from django.contrib import admin
 from .models import Course, Topic, TopicDependency, PYQQuestion, StudentProfile, UserCourseRating
+from .models import PlanSetting
+admin.site.register(PlanSetting)
 
 @admin.register(Course)
 class CourseAdmin(admin.ModelAdmin):

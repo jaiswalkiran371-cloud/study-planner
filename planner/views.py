@@ -44,13 +44,25 @@ def logout_view(request):
 def dashboard(request):
     return render(request, 'planner/dashboard.html')
 
+from .planning_engine import calculate_time_budget, PlanValidationError
+
 @login_required
 def study_setup(request):
     if request.method == 'POST':
         form = StudySetupForm(request.POST)
         if form.is_valid():
+            try:
+                budget = calculate_time_budget(
+                    form.cleaned_data['exam_date'],
+                    form.cleaned_data['daily_hours']
+                )
+            except PlanValidationError as e:
+                form.add_error(None, str(e))
+                return render(request, 'planner/study_setup.html', {'form': form})
+
             request.session['exam_date'] = str(form.cleaned_data['exam_date'])
             request.session['daily_hours'] = str(form.cleaned_data['daily_hours'])
+            request.session['time_budget'] = budget
             course_ids = [c.id for c in form.cleaned_data['courses']]
             request.session['selected_course_ids'] = course_ids
             return redirect('rate_courses')
