@@ -84,3 +84,39 @@ class PlanSetting(models.Model):
 
     def __str__(self):
         return f"Settings (revision={self.revision_percent}%)"
+
+class Plan(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    start_date = models.DateField()
+    exam_date = models.DateField()
+    daily_hours = models.DecimalField(max_digits=4, decimal_places=1)
+    status = models.CharField(max_length=20, default='active')  # active, completed, abandoned
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        db_table = 'plan'
+
+    def __str__(self):
+        return f"Plan for {self.user.username} (exam {self.exam_date})"
+
+
+class StudySession(models.Model):
+    SESSION_TYPES = [('learning', 'Learning'), ('revision', 'Revision')]
+    STATUS_CHOICES = [
+        ('pending', 'Pending'), ('completed', 'Completed'),
+        ('missed', 'Missed'), ('rescheduled', 'Rescheduled'),
+    ]
+
+    plan = models.ForeignKey(Plan, on_delete=models.CASCADE, related_name='sessions')
+    topic = models.ForeignKey(Topic, on_delete=models.CASCADE)
+    date = models.DateField()
+    duration = models.DecimalField(max_digits=4, decimal_places=2)
+    session_type = models.CharField(max_length=20, choices=SESSION_TYPES, default='learning')
+    status = models.CharField(max_length=20, choices=STATUS_CHOICES, default='pending')
+
+    class Meta:
+        db_table = 'study_session'
+
+    def __str__(self):
+        return f"{self.date} - {self.topic.name} ({self.duration}h)"
+        

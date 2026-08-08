@@ -2,7 +2,59 @@ from datetime import date
 from .models import PlanSetting
 from .models import Topic, PYQQuestion, PlanSetting
 from .models import Topic, TopicDependency
+from datetime import timedelta
 
+
+def generate_schedule(course, student_rating, exam_date, daily_hours, start_date=None):
+    """
+    Generates a day-by-day list of sessions for ALL topics in the course,
+    respecting prerequisites, priority order, session splitting, daily
+    capacity, and basic course-fairness (max 2 consecutive same-course
+    blocks isn't needed yet since this handles ONE course at a time --
+    multi-course fairness comes when you extend this to multiple courses).
+    """
+    if start_date is None:
+        start_date = date.today()
+
+    all_topics = list(Topic.objects.filter(course=course))
+    completed_ids = []
+    # Each entry: {topic, remaining_hours}
+    remaining_work = {t.id: float(t.estimated_hours) for t in all_topics}
+
+    schedule = []  # list of dicts: {date, topic, duration}
+    current_date = start_date
+    days_scheduled = 0
+    max_days = (exam_date - start_date).days
+
+    while remaining_work and days_scheduled < max_days:
+        day_capacity = float(daily_hours)
+        day_sessions = []
+
+        while day_capacity > 0:
+            ranked = rank_eligible_topics(course, completed_ids, student_rating)
+            # Only consider topics that still have remaining hours
+            ranked = [t for t in ranked if remaining_work.get(t.id, 0) > 0]
+
+            if not ranked:
+                break  # nothing eligible/left to schedule today
+
+            topic = ranked[0]
+            block = min(MAX_BLOCK_HOURS, remaining_work[topic.id], day_capacity)
+            block = round(block, 2)
+
+            day_sessions.append({'date': current_date, 'topic': topic, 'duration': block})
+            remaining_work[topic.id] -= block
+            day_capacity -= block
+
+            if remaining_work[topic.id] <= 0:
+                del remaining_work[topic.id]
+                completed_ids.append(topic.id)  # treat as "scheduled" so dependents unlock
+
+        schedule.extend(day_sessions)
+        current_date += timedelta(days=1)
+        days_scheduled += 1
+
+    return schedule
 
 def get_prerequisites(topic):
     """Returns a list of Topic objects that must come before this one."""
@@ -108,3 +160,19 @@ def rank_eligible_topics(course, completed_or_scheduled_topic_ids, student_ratin
     scored.sort(key=lambda x: (-x[0], x[1]))
 
     return [t for (priority, order, t) in scored]
+
+MAX_BLOCK_HOURS = 2.0  # configurable max session length
+
+
+def split_into_blocks(estimated_hours, max_block_hours=MAX_BLOCK_HOURS):
+    """
+    Splits a topic's total hours into a list of session block sizes.
+    E.g. 4.5 hours with max 2.0 -> [2.0, 2.0, 0.5]
+    """
+    blocks = []
+    remaining = float(estimated_hours)
+    while remaining > 0:
+        block = min(max_block_hours, remaining)
+        blocks.append(round(block, 2))
+        remaining -= block
+    return blocks
