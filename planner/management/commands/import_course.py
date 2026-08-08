@@ -72,6 +72,7 @@ class Command(BaseCommand):
                         course=course,
                         topic=topic_lookup[topic_name],
                         subtopic=row['Subtopic'].strip(),
+                        term=row['Term / Paper'].strip(),
                         year=int(row['Term / Paper'].strip()[-4:]),
                         marks=float(row['Marks']),
                         question_text=row['Question'].strip(),

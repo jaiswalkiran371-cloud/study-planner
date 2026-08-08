@@ -39,6 +39,7 @@ class PYQQuestion(models.Model):
     course = models.ForeignKey(Course, on_delete=models.CASCADE)
     topic = models.ForeignKey(Topic, on_delete=models.CASCADE)
     subtopic = models.CharField(max_length=200, blank=True)
+    term = models.CharField(max_length=20, default='')   # NEW — e.g. "Dec 2025"
     year = models.IntegerField()
     marks = models.DecimalField(max_digits=4, decimal_places=1)
     question_text = models.TextField()
