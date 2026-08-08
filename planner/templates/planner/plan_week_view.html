@@ -1,0 +1,14 @@
+<h1>Your Study Plan — Week View</h1>
+<p>Exam date: {{ plan.exam_date }}</p>
+<a href="{% url 'plan_day_view' plan.id %}">Switch to Day View</a>
+
+{% for week, sessions in grouped.items %}
+    <h3>Week {{ week }}</h3>
+    <ul>
+    {% for s in sessions %}
+        <li>{{ s.date }} — {{ s.topic.name }} — {{ s.duration }}h</li>
+    {% endfor %}
+    </ul>
+{% endfor %}
+
+<a href="/dashboard/">Back to Dashboard</a>

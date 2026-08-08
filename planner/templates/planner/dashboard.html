@@ -1,3 +1,14 @@
 <h1>Dashboard</h1>
 <p>Welcome, {{ user.username }}!</p>
-<a href="/setup/">Set Up Study Plan</a> | <a href="/logout/">Logout</a>
+<a href="/setup/">Create New Study Plan</a> | <a href="/logout/">Logout</a>
+
+<h3>Your Plans</h3>
+<ul>
+{% for plan in plans %}
+    <li>
+        Exam: {{ plan.exam_date }} —
+        <a href="{% url 'plan_day_view' plan.id %}">Day View</a> |
+        <a href="{% url 'plan_week_view' plan.id %}">Week View</a>
+    </li>
+{% endfor %}
+</ul>
