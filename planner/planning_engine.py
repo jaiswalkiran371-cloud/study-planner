@@ -270,3 +270,61 @@ def regenerate_plan(plan):
             shortage_hours += remaining_to_place
 
     return {'rescheduled_count': rescheduled_count, 'shortage_hours': round(shortage_hours, 2)}
+
+def generate_revision_sessions(course, topics_studied, exam_date, revision_hours_available, student_rating):
+    """
+    Places revision blocks in the final portion of the plan, highest-priority
+    topics first (Section 14.1). Only revises topics that were actually
+    studied (their learning sessions exist).
+    """
+    if revision_hours_available <= 0 or not topics_studied:
+        return []
+
+    # Rank studied topics by priority -- revise the most important first
+    scored = []
+    for topic in topics_studied:
+        priority = calculate_priority_score(topic, student_rating)
+        scored.append((priority, topic))
+    scored.sort(key=lambda x: -x[0])
+
+    # Revision window: final 30% of remaining days (a reasonable default,
+    # matches spec's "place revision primarily in the final portion")
+    today = date_cls.today()
+    total_days = (exam_date - today).days
+    revision_window_days = max(1, round(total_days * 0.3))
+    revision_start = exam_date - timedelta(days=revision_window_days)
+
+    sessions = []
+    remaining_hours = revision_hours_available
+    current_date = max(revision_start, today)
+    day_used = 0.0
+    max_daily_revision = 1.5  # keep revision blocks light/focused, configurable later
+
+    for priority, topic in scored:
+        if remaining_hours <= 0:
+            break
+        block = min(max_daily_revision, remaining_hours)
+        block = round(block, 2)
+
+        if current_date > exam_date:
+            break  # ran out of days before revision hours were used up
+
+        sessions.append({'date': current_date, 'topic': topic, 'duration': block})
+        remaining_hours -= block
+        day_used += block
+
+        if day_used >= max_daily_revision:
+            current_date += timedelta(days=1)
+            day_used = 0.0
+
+    return sessions
+
+def check_capacity(total_hours_required, total_hours_available):
+    """
+    Returns (fits, shortage_hours). Section 14.3: 'the system should not
+    silently create impossible schedules.'
+    """
+    if total_hours_required <= total_hours_available:
+        return True, 0
+    shortage = round(total_hours_required - total_hours_available, 2)
+    return False, shortage

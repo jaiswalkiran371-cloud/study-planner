@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import login, logout, authenticate
 from django.contrib.auth.decorators import login_required
-from .models import Course, StudentProfile, UserCourseRating
+from .models import Course, StudentProfile, UserCourseRating, Topic
 from .forms import StudySetupForm
 from datetime import date
 from .planning_engine import calculate_time_budget, PlanValidationError, generate_schedule
@@ -96,6 +96,11 @@ def rate_courses(request):
     return render(request, 'planner/rate_courses.html', {'courses': courses})
 
 
+from .planning_engine import (
+    calculate_time_budget, PlanValidationError, generate_schedule,
+    generate_revision_sessions, check_capacity
+)
+
 @login_required
 def generate_plan(request):
     exam_date = date.fromisoformat(request.session['exam_date'])
@@ -103,15 +108,18 @@ def generate_plan(request):
     course_ids = request.session.get('selected_course_ids', [])
     courses = Course.objects.filter(id__in=course_ids)
 
+    budget = calculate_time_budget(exam_date, daily_hours)
+
+    # Check capacity BEFORE generating anything
+    total_required = sum(float(t.estimated_hours) for c in courses for t in Topic.objects.filter(course=c))
+    fits, shortage = check_capacity(total_required, budget['learning_hours'])
+
     plan = Plan.objects.create(
         user=request.user, start_date=date.today(),
         exam_date=exam_date, daily_hours=daily_hours
     )
 
-    # NOTE: for now this schedules ONE course at a time using the full
-    # daily hours each, run sequentially. True multi-course interleaving
-    # (Section 13.4 fairness) comes in a later day once you have 2+ courses
-    # loaded to actually test it against.
+    all_studied_topics = []
     current_start = date.today()
     for course in courses:
         rating_obj = UserCourseRating.objects.get(user=request.user, course=course)
@@ -125,6 +133,25 @@ def generate_plan(request):
                 plan=plan, topic=s['topic'], date=s['date'],
                 duration=s['duration'], session_type='learning'
             )
+            if s['topic'] not in all_studied_topics:
+                all_studied_topics.append(s['topic'])
+
+    # Now add revision sessions using the reserved hours from Day 8's budget
+    rating_lookup = {c.id: UserCourseRating.objects.get(user=request.user, course=c).rating for c in courses}
+    avg_rating = sum(rating_lookup.values()) / len(rating_lookup) if rating_lookup else 5
+
+    revision_sessions = generate_revision_sessions(
+        courses.first(), all_studied_topics, exam_date,
+        budget['revision_hours'], avg_rating
+    )
+    for s in revision_sessions:
+        StudySession.objects.create(
+            plan=plan, topic=s['topic'], date=s['date'],
+            duration=s['duration'], session_type='revision'
+        )
+
+    if not fits:
+        messages.warning(request, f"Heads up: your selected courses need {shortage}h more than your available time before the exam. This is the best feasible plan given your constraints.")
 
     return redirect('plan_day_view', plan_id=plan.id)
 
