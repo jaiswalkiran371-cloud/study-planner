@@ -176,3 +176,18 @@ def split_into_blocks(estimated_hours, max_block_hours=MAX_BLOCK_HOURS):
         blocks.append(round(block, 2))
         remaining -= block
     return blocks
+
+from datetime import date as date_cls
+
+
+def mark_overdue_sessions_as_missed(plan):
+    """
+    Any 'pending' session whose date has already passed becomes 'missed'.
+    Matches Section 14.2: status changes automatically once the date passes.
+    """
+    from .models import StudySession
+    overdue = StudySession.objects.filter(
+        plan=plan, status='pending', date__lt=date_cls.today()
+    )
+    count = overdue.update(status='missed')
+    return count

@@ -6,9 +6,29 @@
     <h3>{{ day }}</h3>
     <ul>
     {% for s in sessions %}
-        <li>{{ s.topic.name }} — {{ s.duration }}h ({{ s.session_type }}) — <strong>{{ s.status }}</strong></li>
+        <li>
+            {{ s.topic.name }} — {{ s.duration }}h ({{ s.session_type }}) —
+            <strong>{{ s.status }}</strong>
+
+            {% if s.status == 'pending' or s.status == 'missed' %}
+            <form method="post" action="{% url 'update_session_status' s.id %}" style="display:inline;">
+                {% csrf_token %}
+                <input type="hidden" name="status" value="completed">
+                <button type="submit">Mark Complete</button>
+            </form>
+            {% endif %}
+
+            {% if s.status == 'pending' %}
+            <form method="post" action="{% url 'update_session_status' s.id %}" style="display:inline;">
+                {% csrf_token %}
+                <input type="hidden" name="status" value="missed">
+                <button type="submit">Mark Missed</button>
+            </form>
+            {% endif %}
+        </li>
     {% endfor %}
     </ul>
 {% endfor %}
 
+<a href="{% url 'progress_view' plan.id %}">View Progress</a> |
 <a href="/dashboard/">Back to Dashboard</a>

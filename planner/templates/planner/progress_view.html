@@ -1,0 +1,13 @@
+<h1>Progress</h1>
+<p>{{ percent_complete }}% of study hours completed</p>
+
+<p>Sessions: {{ completed }} completed / {{ missed }} missed / {{ pending }} pending / {{ total }} total</p>
+
+<h3>By Course</h3>
+<ul>
+{% for course, data in course_progress.items %}
+    <li>{{ course }}: {{ data.completed }}h / {{ data.total }}h</li>
+{% endfor %}
+</ul>
+
+<a href="{% url 'plan_day_view' plan.id %}">Back to Plan</a>

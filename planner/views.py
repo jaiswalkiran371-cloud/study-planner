@@ -9,6 +9,8 @@ from .planning_engine import calculate_time_budget, PlanValidationError, generat
 from .models import Plan, StudySession
 from collections import defaultdict
 from datetime import timedelta
+from django.views.decorators.http import require_POST
+from django.shortcuts import get_object_or_404
 
 def home(request):
     return render(request, 'planner/home.html')
@@ -125,10 +127,14 @@ def generate_plan(request):
 
     return redirect('plan_day_view', plan_id=plan.id)
 
+from .planning_engine import mark_overdue_sessions_as_missed
+
 @login_required
 def plan_day_view(request, plan_id):
     plan = Plan.objects.get(id=plan_id, user=request.user)
+    mark_overdue_sessions_as_missed(plan)
     sessions = StudySession.objects.filter(plan=plan).order_by('date')
+    
 
     grouped = defaultdict(list)
     for s in sessions:
@@ -153,4 +159,47 @@ def plan_week_view(request, plan_id):
 
     return render(request, 'planner/plan_week_view.html', {
         'plan': plan, 'grouped': dict(sorted(grouped.items()))
+    })
+
+@login_required
+@require_POST
+def update_session_status(request, session_id):
+    session = get_object_or_404(StudySession, id=session_id, plan__user=request.user)
+    new_status = request.POST.get('status')
+
+    if new_status in ['completed', 'missed', 'pending']:
+        session.status = new_status
+        session.save()
+
+    return redirect('plan_day_view', plan_id=session.plan.id)
+
+@login_required
+def progress_view(request, plan_id):
+    plan = Plan.objects.get(id=plan_id, user=request.user)
+    sessions = StudySession.objects.filter(plan=plan)
+
+    total = sessions.count()
+    completed = sessions.filter(status='completed').count()
+    missed = sessions.filter(status='missed').count()
+    pending = sessions.filter(status='pending').count()
+
+    total_hours = sum(float(s.duration) for s in sessions)
+    completed_hours = sum(float(s.duration) for s in sessions.filter(status='completed'))
+
+    percent_complete = round((completed_hours / total_hours) * 100, 1) if total_hours > 0 else 0
+
+    # Per-course breakdown
+    course_progress = {}
+    for s in sessions:
+        course_name = s.topic.course.course_name
+        course_progress.setdefault(course_name, {'total': 0, 'completed': 0})
+        course_progress[course_name]['total'] += float(s.duration)
+        if s.status == 'completed':
+            course_progress[course_name]['completed'] += float(s.duration)
+
+    return render(request, 'planner/progress_view.html', {
+        'plan': plan, 'total': total, 'completed': completed,
+        'missed': missed, 'pending': pending,
+        'percent_complete': percent_complete,
+        'course_progress': course_progress,
     })
