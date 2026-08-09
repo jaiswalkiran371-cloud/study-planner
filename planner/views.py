@@ -12,6 +12,7 @@ from datetime import timedelta
 from django.views.decorators.http import require_POST
 from django.shortcuts import get_object_or_404
 from django.contrib import messages
+from .models import PYQQuestion, UserQuestionProgress
 
 def home(request):
     return render(request, 'planner/home.html')
@@ -253,3 +254,31 @@ def regenerate_plan_view(request, plan_id):
         messages.success(request, f"Rescheduled {result['rescheduled_count']} session(s).")
 
     return redirect('plan_day_view', plan_id=plan.id)
+
+@login_required
+def topic_questions(request, topic_id):
+    topic = get_object_or_404(Topic, id=topic_id)
+    questions = PYQQuestion.objects.filter(topic=topic).order_by('-year')
+
+    practiced_ids = set(
+        UserQuestionProgress.objects.filter(user=request.user, practiced=True, question__topic=topic)
+        .values_list('question_id', flat=True)
+    )
+
+    return render(request, 'planner/topic_questions.html', {
+        'topic': topic,
+        'questions': questions,
+        'practiced_ids': practiced_ids,
+    })
+
+
+@login_required
+@require_POST
+def toggle_question_practiced(request, question_id):
+    question = get_object_or_404(PYQQuestion, id=question_id)
+    progress, created = UserQuestionProgress.objects.get_or_create(
+        user=request.user, question=question
+    )
+    progress.practiced = not progress.practiced
+    progress.save()
+    return redirect('topic_questions', topic_id=question.topic_id)

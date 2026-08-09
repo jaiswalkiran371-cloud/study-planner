@@ -27,3 +27,6 @@ class PYQQuestionAdmin(admin.ModelAdmin):
 admin.site.register(TopicDependency)
 admin.site.register(StudentProfile)
 admin.site.register(UserCourseRating)
+
+from .models import UserQuestionProgress
+admin.site.register(UserQuestionProgress)

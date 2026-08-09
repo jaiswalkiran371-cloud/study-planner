@@ -6,7 +6,7 @@
     <h3>Week {{ week }}</h3>
     <ul>
     {% for s in sessions %}
-        <li>{{ s.date }} — {{ s.topic.name }} — {{ s.duration }}h</li>
+        <li><a href="{% url 'topic_questions' s.topic.id %}">{{ s.topic.name }}</a> — {{ s.duration }}h ({{ s.session_type }}) —</li>
     {% endfor %}
     </ul>
 {% endfor %}

@@ -119,4 +119,13 @@ class StudySession(models.Model):
 
     def __str__(self):
         return f"{self.date} - {self.topic.name} ({self.duration}h)"
+
+class UserQuestionProgress(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    question = models.ForeignKey(PYQQuestion, on_delete=models.CASCADE)
+    practiced = models.BooleanField(default=False)
+
+    class Meta:
+        db_table = 'user_question_progress'
+        unique_together = ('user', 'question')
         

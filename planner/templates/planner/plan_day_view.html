@@ -18,7 +18,7 @@
     <ul>
     {% for s in sessions %}
         <li>
-            {{ s.topic.name }} — {{ s.duration }}h ({{ s.session_type }}) —
+            <a href="{% url 'topic_questions' s.topic.id %}">{{ s.topic.name }}</a> — {{ s.duration }}h ({{ s.session_type }}) —
             <strong>{{ s.status }}</strong>
 
             {% if s.status == 'pending' or s.status == 'missed' %}
