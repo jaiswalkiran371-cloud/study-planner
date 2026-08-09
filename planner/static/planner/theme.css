@@ -1,0 +1,46 @@
+:root {
+    --bs-primary: #7C83FD;         /* pastel indigo-purple */
+    --bs-primary-rgb: 124, 131, 253;
+    --bs-secondary: #A0C4FF;       /* pastel blue */
+    --bs-light: #F8F7FF;
+    --bs-body-bg: #FAFAFF;
+    --bs-body-color: #4A4A68;
+}
+
+body {
+    background-color: var(--bs-body-bg);
+}
+
+.navbar {
+    background: linear-gradient(90deg, #7C83FD, #A0C4FF) !important;
+}
+
+.navbar-brand, .navbar .btn {
+    color: #ffffff !important;
+    border-color: rgba(255,255,255,0.6);
+}
+
+.btn-primary {
+    background-color: #7C83FD;
+    border-color: #7C83FD;
+}
+.btn-primary:hover {
+    background-color: #6067e6;
+    border-color: #6067e6;
+}
+
+.card, .list-group-item {
+    border-color: #E4E4F7;
+    border-radius: 14px;
+}
+
+.badge.bg-secondary { background-color: #C9CCFB !important; color: #4A4A68; }
+.badge.bg-success   { background-color: #B8E6C9 !important; color: #14532d; }
+.badge.bg-danger    { background-color: #F9C6D0 !important; color: #7a1f2b; }
+.badge.bg-warning   { background-color: #FDE9B6 !important; color: #7a5b12; }
+
+.progress-bar {
+    background-color: #A78BFA;
+}
+
+.text-muted { color: #9B9BB5 !important; }

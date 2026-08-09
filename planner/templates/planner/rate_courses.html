@@ -1,11 +1,26 @@
-<h1>Rate Your Courses (0 = very weak, 10 = very strong)</h1>
-<form method="post">
-    {% csrf_token %}
-    {% for course in courses %}
-        <p>
-            {{ course.course_name }}:
-            <input type="number" name="rating_{{ course.id }}" min="0" max="10" required>
-        </p>
-    {% endfor %}
-    <button type="submit">Save & Continue</button>
-</form>
+{% extends 'planner/base.html' %}
+{% block title %}Rate Courses{% endblock %}
+{% block content %}
+
+<div class="row justify-content-center">
+<div class="col-md-6">
+    <h4 class="fw-bold mb-1">Rate Your Courses</h4>
+    <p class="text-muted mb-4">0 = very weak, 10 = very strong</p>
+
+    <form method="post">
+        {% csrf_token %}
+        {% for course in courses %}
+        <div class="card mb-3">
+            <div class="card-body d-flex justify-content-between align-items-center">
+                <span class="fw-medium">{{ course.course_name }}</span>
+                <input type="number" name="rating_{{ course.id }}" min="0" max="10" required
+                       class="form-control" style="width: 80px;">
+            </div>
+        </div>
+        {% endfor %}
+        <button type="submit" class="btn btn-primary w-100">Save & Continue</button>
+    </form>
+</div>
+</div>
+
+{% endblock %}

@@ -1,13 +1,30 @@
-<h1>Progress</h1>
-<p>{{ percent_complete }}% of study hours completed</p>
+{% extends 'planner/base.html' %}
+{% block title %}Progress{% endblock %}
+{% block content %}
 
-<p>Sessions: {{ completed }} completed / {{ missed }} missed / {{ pending }} pending / {{ total }} total</p>
+<h4 class="fw-bold mb-3">Progress</h4>
 
-<h3>By Course</h3>
-<ul>
+<div class="progress mb-3" style="height: 22px; border-radius: 10px;">
+    <div class="progress-bar" role="progressbar" style="width: {{ percent_complete }}%;">
+        {{ percent_complete }}%
+    </div>
+</div>
+
+<p class="text-muted">{{ completed }} completed · {{ missed }} missed · {{ pending }} pending · {{ total }} total sessions</p>
+
+<h6 class="fw-semibold mt-4 mb-3">By Course</h6>
 {% for course, data in course_progress.items %}
-    <li>{{ course }}: {{ data.completed }}h / {{ data.total }}h</li>
+<div class="mb-3">
+    <div class="d-flex justify-content-between small mb-1">
+        <span>{{ course }}</span>
+        <span class="text-muted">{{ data.completed }}h / {{ data.total }}h</span>
+    </div>
+    <div class="progress" style="height: 8px; border-radius: 10px;">
+        <div class="progress-bar" style="width: {% widthratio data.completed data.total 100 %}%;"></div>
+    </div>
+</div>
 {% endfor %}
-</ul>
 
-<a href="{% url 'plan_day_view' plan.id %}">Back to Plan</a>
+<a href="{% url 'plan_day_view' plan.id %}" class="btn btn-outline-secondary mt-3">Back to Plan</a>
+
+{% endblock %}

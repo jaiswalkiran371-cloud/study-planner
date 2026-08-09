@@ -1,16 +1,27 @@
-<h1>{{ topic.name }} — Practice Questions</h1>
-<p>{{ practiced_ids|length }} of {{ questions|length }} practiced</p>
+{% extends 'planner/base.html' %}
+{% block title %}{{ topic.name }}{% endblock %}
+{% block content %}
 
-<ul>
+<h4 class="fw-bold mb-1">{{ topic.name }}</h4>
+<p class="text-muted mb-4">{{ practiced_ids|length }} of {{ questions|length }} practiced</p>
+
+<div class="list-group">
 {% for q in questions %}
-    <li>
-        <form method="post" action="{% url 'toggle_question_practiced' q.id %}" style="display:inline;">
+    <div class="list-group-item d-flex align-items-start gap-3">
+        <form method="post" action="{% url 'toggle_question_practiced' q.id %}" class="mt-1">
             {% csrf_token %}
-            <input type="checkbox" onchange="this.form.submit()" {% if q.id in practiced_ids %}checked{% endif %}>
+            <input type="checkbox" class="form-check-input" onchange="this.form.submit()"
+                   {% if q.id in practiced_ids %}checked{% endif %}>
         </form>
-        [{{ q.year }}] {{ q.subtopic }} ({{ q.marks }} marks) — {{ q.question_text }}
-    </li>
+        <div>
+            <span class="badge bg-secondary">{{ q.year }}</span>
+            <span class="text-muted small">{{ q.subtopic }} · {{ q.marks }} marks</span>
+            <div>{{ q.question_text }}</div>
+        </div>
+    </div>
 {% endfor %}
-</ul>
+</div>
 
-<a href="/dashboard/">Back to Dashboard</a>
+<a href="/dashboard/" class="btn btn-outline-secondary mt-4">Back to Dashboard</a>
+
+{% endblock %}

@@ -1,2 +1,15 @@
-<h1>Personalized Study Planner</h1>
-<p>Welcome! Please <a href="/login/">Login</a> or <a href="/register/">Register</a>.</p>
+{% extends 'planner/base.html' %}
+{% block title %}Welcome{% endblock %}
+{% block content %}
+
+<div class="text-center py-5">
+    <h1 class="fw-bold display-5 mb-3">Plan Smarter. Study Better.</h1>
+    <p class="text-muted mb-4 col-md-6 mx-auto">
+        A personalized study planner that builds your day-wise schedule based on your exam date,
+        available hours, course strengths, and previous-year question patterns.
+    </p>
+    <a href="/login/" class="btn btn-primary me-2">Login</a>
+    <a href="/register/" class="btn btn-outline-primary">Register</a>
+</div>
+
+{% endblock %}
