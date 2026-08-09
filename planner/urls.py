@@ -15,4 +15,5 @@ urlpatterns = [
     path('session/<int:session_id>/status/', views.update_session_status, name='update_session_status'),
     path('plan/<int:plan_id>/progress/', views.progress_view, name='progress_view'),
     path('plan/<int:plan_id>/regenerate/', views.regenerate_plan_view, name='regenerate_plan'),
+    path('plan/<int:plan_id>/delete/', views.delete_plan, name='delete_plan'),
 ]

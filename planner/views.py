@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import login, logout, authenticate
 from django.contrib.auth.decorators import login_required
@@ -51,6 +51,14 @@ def logout_view(request):
 def dashboard(request):
     plans = Plan.objects.filter(user=request.user).order_by('-created_at')
     return render(request, 'planner/dashboard.html', {'plans': plans})
+
+@login_required
+@require_POST
+def delete_plan(request, plan_id):
+    plan = get_object_or_404(Plan, id=plan_id, user=request.user)
+    plan.delete()
+    messages.success(request, "Study plan deleted.")
+    return redirect('dashboard')
 
 from .planning_engine import calculate_time_budget, PlanValidationError
 

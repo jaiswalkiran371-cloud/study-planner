@@ -2,6 +2,14 @@
 <p>Welcome, {{ user.username }}!</p>
 <a href="/setup/">Create New Study Plan</a> | <a href="/logout/">Logout</a>
 
+{% if messages %}
+<ul>
+{% for message in messages %}
+    <li>{{ message }}</li>
+{% endfor %}
+</ul>
+{% endif %}
+
 <h3>Your Plans</h3>
 <ul>
 {% for plan in plans %}
@@ -9,6 +17,10 @@
         Exam: {{ plan.exam_date }} —
         <a href="{% url 'plan_day_view' plan.id %}">Day View</a> |
         <a href="{% url 'plan_week_view' plan.id %}">Week View</a>
+        <form method="post" action="{% url 'delete_plan' plan.id %}" style="display:inline;" onsubmit="return confirm('Delete this plan permanently?');">
+            {% csrf_token %}
+            <button type="submit">Delete</button>
+        </form>
     </li>
 {% endfor %}
 </ul>
