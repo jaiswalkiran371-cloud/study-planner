@@ -1,0 +1,9 @@
+Topic,Frequency,Papers Appeared,Total Papers,Avg Marks,Importance
+Algorithm Fundamentals and Asymptotic Analysis,21,8,8,5.24,9
+Recurrence Relations and Master Theorem,9,6,8,6.22,8
+Divide and Conquer and Sorting Algorithms,24,8,8,7.17,9
+Greedy Algorithms,22,8,8,7.86,9
+Dynamic Programming,9,7,8,7.67,10
+Graph Traversal Shortest Path and MST Algorithms,32,8,8,7.12,10
+String Matching Algorithms,5,5,8,7.8,6
+Complexity Classes and NP-Completeness,19,7,8,6.21,8

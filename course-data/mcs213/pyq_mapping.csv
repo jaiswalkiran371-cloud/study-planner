@@ -1,0 +1,103 @@
+Term / Paper,Question,Topic,Subtopic,Marks
+June 2022,Define Cleanroom Software Engineering. Explain its significance and underlying principles.,Cleanroom Software Engineering,Cleanroom Software Engineering,10
+June 2022,Explain the various phases of the Spiral Model.,Software Process Models,Spiral Model,10
+June 2022,Write a short note on Cyclomatic Complexity.,Software Design and Architecture,Cyclomatic Complexity,10
+June 2022,List and explain the various levels of SEI-CMM.,Software Quality and Process Improvement,SEI-CMM,10
+June 2022,Explain Unit Testing and distinguish it from Integration Testing.,Software Testing,Unit and Integration Testing,10
+June 2022,Develop an SRS for a Railway Reservation System with assumptions.,Requirements Engineering,Software Requirements Specification (SRS),10
+June 2022,Explain Change Management and its process.,Software Configuration and Change Management,Change Management,10
+June 2022,Explain Cohesion and its types.,Software Design and Architecture,Cohesion,10
+June 2022,Draw the first three levels of DFDs for a Railway Reservation System.,Requirements Engineering,Data Flow Diagrams (DFD),10
+June 2022,Explain Verification versus Validation with examples.,Software Testing,Verification and Validation,10
+June 2022,Explain Version Control with an example.,Software Configuration and Change Management,Version Control,10
+June 2022,Write a short note on Baselines.,Software Configuration and Change Management,Baselines,10
+December 2022,Explain methods for estimating project cost and effort; explain one method.,Software Project Estimation and Management,Cost and Effort Estimation,10
+December 2022,Explain McCall's Quality Factors.,Software Quality and Process Improvement,McCall's Quality Factors,10
+December 2022,Explain the steps involved in Debugging.,Software Testing,Debugging,10
+December 2022,Explain the Software Configuration Management process.,Software Configuration and Change Management,Software Configuration Management,10
+December 2022,Write a short note on Human Computer Interface (HCI).,Software Design and Architecture,Human Computer Interaction (HCI),10
+December 2022,Develop an SRS for a Hospital Management System with assumptions.,Requirements Engineering,Software Requirements Specification (SRS),10
+December 2022,Explain Alpha Testing and distinguish it from Beta Testing.,Software Testing,Alpha and Beta Testing,10
+December 2022,Define Risk and explain phases of Risk Management.,Software Project Estimation and Management,Risk Management,10
+December 2022,Explain any two methods for Software Project scheduling.,Software Project Estimation and Management,Project Scheduling,10
+December 2022,Explain Boundary Value Analysis with an example.,Software Testing,Boundary Value Analysis,10
+December 2022,Draw the first three levels of DFDs for a Student Information System.,Requirements Engineering,Data Flow Diagrams (DFD),10
+December 2022,Write a short note on Software Re-engineering.,Software Maintenance and Evolution,Re-engineering,10
+June 2023,"Explain Native Application Development, Rapid Mobile Application Development, and Progressive Web Applications, with advantages.",Mobile and Web Application Engineering,Mobile Application Development Approaches,10
+June 2023,Discuss requirements and architecture/design optimizations in the First Time Right framework.,Software Quality and Process Improvement,First Time Right (FTR) Optimization,10
+June 2023,"Explain project-size, effort, schedule, and total-cost estimation tasks.",Software Project Estimation and Management,Software Project Estimation,10
+June 2023,Discuss Waterfall and Spiral software engineering models.,Software Process Models,Waterfall and Spiral Models,10
+June 2023,"Discuss HCI, UX, and designing for mobility in the software design phase.",Software Design and Architecture,"HCI, UX and Mobility Design",10
+June 2023,Explain defect metrics and maintainability metrics for software quality.,Software Quality and Process Improvement,Software Quality Metrics,10
+June 2023,Define Cleanroom Software Engineering and explain its principles.,Cleanroom Software Engineering,Cleanroom Software Engineering,10
+June 2023,Explain Low Code/No Code platforms and Containerization as emerging trends.,Mobile and Web Application Engineering,Emerging Software Engineering Trends,10
+June 2023,Discuss issues and challenges in management of web-based projects.,Mobile and Web Application Engineering,Web Project Management,10
+June 2023,"Define CASE tools, categories, and factors affecting deployment.",Software Design and Architecture,CASE Tools,10
+June 2023,Write a short note on Cloud platforms.,Mobile and Web Application Engineering,Cloud Platforms,5
+June 2023,Write a short note on Continuous Delivery Model.,Software Process Models,Continuous Delivery Model,5
+June 2023,Write a short note on COCOMO Model.,Software Project Estimation and Management,COCOMO Model,5
+June 2023,Write a short note on Control Flow Graph with an example.,Software Design and Architecture,Control Flow Graph (CFG),5
+December 2023,Describe architectural and modular design aspects of software design.,Software Design and Architecture,Architectural and Modular Design,10
+December 2023,Explain Activity and Use-case Behavioral UML diagrams with examples.,Software Design and Architecture,Behavioral UML Diagrams,10
+December 2023,Describe all phases of the Data Science life cycle.,Mobile and Web Application Engineering,Data Science Life Cycle,10
+December 2023,Define and explain the re-engineering process with a block diagram and example.,Software Maintenance and Evolution,Re-engineering,10
+December 2023,"Define Requirements Engineering, its tasks/processes, and functional/non-functional requirements.",Requirements Engineering,Requirements Engineering,10
+December 2023,Define software quality and explain software quality attributes.,Software Quality and Process Improvement,Software Quality Attributes,10
+December 2023,"Discuss Change Management Process, Change Request, Change Control Report, Authority, and Engineering Change Order.",Software Configuration and Change Management,Change Control,10
+December 2023,"Define risk management and discuss risk manager tool, avoidance, detection, and control.",Software Project Estimation and Management,Risk Management,10
+December 2023,Discuss project-management and development-related optimizations of the First Time Right framework.,Software Quality and Process Improvement,First Time Right (FTR) Optimization,10
+December 2023,Explain drivers for innovation and two emerging trends in software engineering.,Mobile and Web Application Engineering,Emerging Software Engineering Trends,10
+December 2023,Write a short note on Conversational Interfaces.,Mobile and Web Application Engineering,Conversational Interfaces,5
+December 2023,Write a short note on Rapid Mobile Application Development.,Mobile and Web Application Engineering,Rapid Mobile Application Development,5
+December 2023,Write a short note on Prototype Model.,Software Process Models,Prototype Model,5
+December 2023,Write a short note on Putnam's Model for Estimation.,Software Project Estimation and Management,Putnam's Model,5
+June 2024,Explain the levels of the Capability Maturity Model.,Software Quality and Process Improvement,Capability Maturity Model (CMM),10
+June 2024,Explain the Waterfall Model and its phases.,Software Process Models,Waterfall Model,10
+June 2024,"Explain SRS, its SDLC phase, and outline.",Requirements Engineering,Software Requirements Specification (SRS),10
+June 2024,"Explain COCOMO, its levels, and three project classes.",Software Project Estimation and Management,COCOMO Model,10
+June 2024,Define Software Quality and explain nine attributes.,Software Quality and Process Improvement,Software Quality Attributes,10
+June 2024,Explain White Box Testing and its difference from Black Box Testing.,Software Testing,White Box and Black Box Testing,10
+June 2024,Explain the organisation of a Web Application Team.,Mobile and Web Application Engineering,Web Application Team,10
+June 2024,Explain two approaches to mobile application development.,Mobile and Web Application Engineering,Mobile Application Development Approaches,10
+June 2024,Explain any two methods of Data Analysis as part of Data Science.,Mobile and Web Application Engineering,Data Analysis,10
+June 2024,Define UML and explain classification of UML diagrams.,Software Design and Architecture,UML Diagrams,10
+June 2024,Explain the Software Design process.,Software Design and Architecture,Software Design Process,10
+June 2024,Define Re-engineering and distinguish it from Reverse Engineering.,Software Maintenance and Evolution,Re-engineering and Reverse Engineering,10
+December 2024,"Explain Prototyping, its two types, and benefits.",Software Process Models,Prototype Model,10
+December 2024,Explain Putnam's model for estimation.,Software Project Estimation and Management,Putnam's Model,10
+December 2024,"Explain how web applications are developed, tested, and deployed.",Mobile and Web Application Engineering,Web Application Development,10
+December 2024,"Explain Software Process Optimization, including architecture and design optimizations.",Software Quality and Process Improvement,Software Process Optimization,10
+December 2024,"Explain Formal Technical Review, its performance, and objectives.",Software Quality and Process Improvement,Formal Technical Review,10
+December 2024,Explain the steps of Debugging.,Software Testing,Debugging,10
+December 2024,Define Cleanroom Software Engineering and explain its principles.,Cleanroom Software Engineering,Cleanroom Software Engineering,10
+December 2024,Define CASE tools and explain their categories.,Software Design and Architecture,CASE Tools,10
+December 2024,Explain any five elements of Mobile Application Development.,Mobile and Web Application Engineering,Mobile Application Development,10
+December 2024,Explain how software risks are identified and managed.,Software Project Estimation and Management,Risk Management,10
+December 2024,Define Software Reliability and explain assumptions of reliability models.,Software Quality and Process Improvement,Software Reliability,10
+December 2024,Define Cohesion and explain its types.,Software Design and Architecture,Cohesion,10
+June 2025,Discuss the phases of the Software Development Life Cycle with an example.,Software Process Models,Software Development Life Cycle (SDLC),10
+June 2025,Explain the Component Based Software Engineering process with an example.,Software Design and Architecture,Component Based Software Engineering,10
+June 2025,Define Software Quality and explain four quality factors.,Software Quality and Process Improvement,Software Quality Attributes,10
+June 2025,Explain sections of SRS with an example.,Requirements Engineering,Software Requirements Specification (SRS),10
+June 2025,Define Risk and explain phases of Risk Management.,Software Project Estimation and Management,Risk Management,10
+June 2025,Compare Black Box and White Box Testing techniques with an example.,Software Testing,White Box and Black Box Testing,10
+June 2025,Write a short note on Cyclomatic Complexity.,Software Design and Architecture,Cyclomatic Complexity,10
+June 2025,Define coupling and explain its types.,Software Design and Architecture,Coupling,10
+June 2025,Draw first three levels of DFD for a Railway Reservation System with assumptions.,Requirements Engineering,Data Flow Diagrams (DFD),10
+June 2025,Explain the COCOMO model of cost estimation.,Software Project Estimation and Management,COCOMO Model,10
+June 2025,Explain how J2ME applications are tested and state important J2ME features.,Mobile and Web Application Engineering,J2ME Applications,10
+June 2025,Define Reverse Engineering and distinguish it from Re-engineering.,Software Maintenance and Evolution,Re-engineering and Reverse Engineering,10
+December 2025,Explain the Spiral Model and compare it with the Waterfall Model.,Software Process Models,Spiral Model,10
+December 2025,Discuss principles of software design and importance of architectural design.,Software Design and Architecture,Software Design and Architecture,10
+December 2025,Explain software maintenance and two types of maintenance activities.,Software Maintenance and Evolution,Software Maintenance,10
+December 2025,Explain software project scheduling and two scheduling tools.,Software Project Estimation and Management,Project Scheduling,10
+December 2025,Explain importance and key principles of HCI design.,Software Design and Architecture,Human Computer Interaction (HCI),10
+December 2025,Explain software quality metrics and different types used to measure quality.,Software Quality and Process Improvement,Software Quality Metrics,10
+December 2025,Define Software Project Management and explain COCOMO for cost estimation.,Software Project Estimation and Management,COCOMO Model,10
+December 2025,Discuss challenges and solutions for managing global software development teams.,Mobile and Web Application Engineering,Global Software Development,10
+December 2025,Explain software testing and any two testing techniques.,Software Testing,Software Testing Techniques,10
+December 2025,"Explain risk analysis, its steps, and a risk assessment matrix.",Software Project Estimation and Management,Risk Analysis,10
+December 2025,Write a short note on Software Process Improvement (SPI).,Software Quality and Process Improvement,Software Process Improvement (SPI),5
+December 2025,Write a short note on Software Configuration Management (SCM).,Software Configuration and Change Management,Software Configuration Management,5
+December 2025,Write a short note on Software Reuse.,Software Design and Architecture,Software Reuse,5
+December 2025,Write a short note on Reverse Engineering.,Software Maintenance and Evolution,Reverse Engineering,5

@@ -274,40 +274,48 @@ def regenerate_plan(plan):
 def generate_revision_sessions(course, topics_studied, exam_date, revision_hours_available, student_rating):
     """
     Places revision blocks in the final portion of the plan, highest-priority
-    topics first (Section 14.1). Only revises topics that were actually
-    studied (their learning sessions exist).
+    topics first. Revision NEVER lands on the exam date itself — the day
+    before the exam is reserved as a dedicated final review of the most
+    important topics only.
     """
     if revision_hours_available <= 0 or not topics_studied:
         return []
 
-    # Rank studied topics by priority -- revise the most important first
     scored = []
     for topic in topics_studied:
         priority = calculate_priority_score(topic, student_rating)
         scored.append((priority, topic))
     scored.sort(key=lambda x: -x[0])
 
-    # Revision window: final 30% of remaining days (a reasonable default,
-    # matches spec's "place revision primarily in the final portion")
     today = date_cls.today()
-    total_days = (exam_date - today).days
+    # Last usable revision day is exam_date - 1, never the exam date itself
+    last_revision_day = exam_date - timedelta(days=1)
+
+    total_days = (last_revision_day - today).days
     revision_window_days = max(1, round(total_days * 0.3))
-    revision_start = exam_date - timedelta(days=revision_window_days)
+    revision_start = last_revision_day - timedelta(days=revision_window_days)
 
     sessions = []
     remaining_hours = revision_hours_available
     current_date = max(revision_start, today)
     day_used = 0.0
-    max_daily_revision = 1.5  # keep revision blocks light/focused, configurable later
+    max_daily_revision = 1.5
+
+    # Reserve the top 3 highest-priority topics for a dedicated final review
+    # session the day before the exam, separate from the regular rotation.
+    final_review_topics = [t for (p, t) in scored[:3]]
+    final_review_hours_each = 1.0
 
     for priority, topic in scored:
         if remaining_hours <= 0:
             break
+        # Skip ahead of the final-review day during the normal rotation --
+        # that day is reserved separately, below.
+        if current_date >= last_revision_day:
+            break
+
         block = min(max_daily_revision, remaining_hours)
         block = round(block, 2)
-
-        if current_date > exam_date:
-            break  # ran out of days before revision hours were used up
 
         sessions.append({'date': current_date, 'topic': topic, 'duration': block})
         remaining_hours -= block
@@ -316,6 +324,15 @@ def generate_revision_sessions(course, topics_studied, exam_date, revision_hours
         if day_used >= max_daily_revision:
             current_date += timedelta(days=1)
             day_used = 0.0
+
+    # Dedicated final review, always the day before the exam
+    if last_revision_day >= today:
+        for topic in final_review_topics:
+            sessions.append({
+                'date': last_revision_day,
+                'topic': topic,
+                'duration': final_review_hours_each,
+            })
 
     return sessions
 

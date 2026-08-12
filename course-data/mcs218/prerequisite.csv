@@ -1,0 +1,10 @@
+Topic,Prerequisite Topic
+Data Communication Fundamentals,
+Data Link Layer and Error Control,Data Communication Fundamentals
+"LAN, Ethernet and Wireless Networks",Data Communication Fundamentals
+Switching and Internetworking,Data Communication Fundamentals
+Network Layer and Routing,Switching and Internetworking
+Network Layer and Routing,Data Link Layer and Error Control
+Transport Layer and Network Services,Data Link Layer and Error Control
+"Traffic Management, WSN, MANET and IoT",Network Layer and Routing
+Network Security and Cryptography,Data Communication Fundamentals

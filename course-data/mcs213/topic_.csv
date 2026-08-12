@@ -1,0 +1,11 @@
+Topic,Subtopic,Learning Order,Estimated Hours
+Software Process Models,"Spiral Model, Waterfall and Spiral Models, Continuous Delivery Model, Prototype Model, Waterfall Model, Software Development Life Cycle (SDLC)",1,5.0
+Requirements Engineering,"Software Requirements Specification (SRS), Data Flow Diagrams (DFD), Requirements Engineering",2,5.0
+Software Design and Architecture,"Cyclomatic Complexity, Cohesion, Human Computer Interaction (HCI), HCI, UX and Mobility Design, CASE Tools, Control Flow Graph (CFG), Architectural and Modular Design, Behavioral UML Diagrams, UML Diagrams, Software Design Process, Component Based Software Engineering, Coupling, Software Design and Architecture, Software Reuse",3,7.0
+Software Testing,"Unit and Integration Testing, Verification and Validation, Debugging, Alpha and Beta Testing, Boundary Value Analysis, White Box and Black Box Testing, Software Testing Techniques",4,5.0
+Software Project Estimation and Management,"Cost and Effort Estimation, Risk Management, Project Scheduling, Software Project Estimation, COCOMO Model, Putnam's Model, Risk Analysis",5,6.0
+Software Quality and Process Improvement,"SEI-CMM, McCall's Quality Factors, First Time Right (FTR) Optimization, Software Quality Metrics, Software Quality Attributes, Capability Maturity Model (CMM), Software Process Optimization, Formal Technical Review, Software Reliability, Software Process Improvement (SPI)",6,6.0
+Software Configuration and Change Management,"Change Management, Version Control, Baselines, Software Configuration Management, Change Control",7,4.0
+Software Maintenance and Evolution,"Re-engineering, Re-engineering and Reverse Engineering, Software Maintenance, Reverse Engineering",8,4.0
+Mobile and Web Application Engineering,"Mobile Application Development Approaches, Emerging Software Engineering Trends, Web Project Management, Cloud Platforms, Data Science Life Cycle, Conversational Interfaces, Rapid Mobile Application Development, Web Application Team, Data Analysis, Web Application Development, Mobile Application Development, J2ME Applications, Global Software Development",9,6.0
+Cleanroom Software Engineering,Cleanroom Software Engineering,10,3.0

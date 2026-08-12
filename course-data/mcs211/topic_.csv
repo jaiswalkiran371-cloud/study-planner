@@ -1,0 +1,9 @@
+Topic,Subtopic,Learning Order,Estimated Hours
+Algorithm Fundamentals and Asymptotic Analysis,"Polynomial Evaluation, Growth Rate Analysis, Algorithm Characteristics, Asymptotic Notations, Mathematical Induction, Algorithm Building Blocks, Complexity Analysis, Euclid's Algorithm",1,3.5
+Recurrence Relations and Master Theorem,"Recursive Complexity, Recursion Tree Method, Master's Theorem, Substitution Method, Recurrence Relations",2,3.0
+Divide and Conquer and Sorting Algorithms,"Merge Sort, Binary Search Trees, Quick Sort, Binary Exponentiation, Binary Search, Bubble Sort, Strassen's Algorithm, Karatsuba's Algorithm, Selection Sort, Order Statistics, Linear Search",3,6.0
+Greedy Algorithms,"Huffman Coding, Kruskal's Algorithm, Fractional Knapsack, Prim's Algorithm, Task Scheduling, Minimum Cost Spanning Tree, Greedy Method",4,5.0
+Dynamic Programming,"Matrix Chain Multiplication, DP Recurrence, 0/1 Knapsack, Dynamic Programming Approach, Principle of Optimality, Greedy vs Dynamic Programming",5,5.5
+Graph Traversal Shortest Path and MST Algorithms,"Graph Representation, BFS, Topological Sort, Dijkstra's Algorithm, DFS, Floyd-Warshall Algorithm, Graph Terminology, Bellman-Ford Algorithm, Network Flow, Shortest Path Properties",6,7.0
+String Matching Algorithms,"String Matching Basics, KMP Algorithm, Rabin-Karp Algorithm",7,3.0
+Complexity Classes and NP-Completeness,"NP-Completeness, P NP NP-Complete, Backtracking, Branch and Bound, Approximation Algorithms, Tractable vs Intractable, CNF Satisfiability, Optimization and Decision Problems, State Space Tree, Deterministic vs Non-Deterministic, CLIQUE and Vertex Cover, Cook-Levin Theorem, NP Class",8,4.5

@@ -1,0 +1,9 @@
+Topic,Subtopic,Learning Order,Estimated Hours
+Data Communication Fundamentals,"Signals,Data and signal rate,Transmission modes,Transmission media,Transmission and propagation delays,Digital encoding,Analog modulation and encoding,Digital modulation,Digital modulation and noise,Digital modulation and quantization,Sampling and PCM,Quantization,Noise,Multiplexing,Transmission media and frequency",1,7.0
+Data Link Layer and Error Control,"CRC,Error detection and correction,Framing,ALOHA,ALOHA and CSMA,ARQ and pipelining,Checksum and sliding window,Data-link layer and framing,Piggybacking",2,7.0
+"LAN, Ethernet and Wireless Networks","LAN characteristics,Network topologies,Ethernet,Bridges,Wireless LAN,CSMA and Ethernet,IEEE 802.11,IEEE 802.11 and bridges",3,5.0
+Switching and Internetworking,"Switching,Circuit and packet switching,Switching and internetworking,Internetworking and topologies,WAN and network architecture,ATM and switching,OSI model,Internet and network services",4,6.0
+Network Layer and Routing,"Internetwork addressing,IPv4 addressing and datagram,IP addressing,IP addressing and datagram,Network-layer services,Bellman-Ford routing,Shortest-path routing,Dijkstra's algorithm,Distance-vector routing,Link-state routing,Routing algorithms,Routing protocols,Fragmentation and gateway routing",5,7.0
+Transport Layer and Network Services,"Connection-oriented services,Transport-layer services,TCP and Nagle's algorithm,UDP,RPC,Flow control,Internet and network services",6,5.0
+"Traffic Management, WSN, MANET and IoT","Congestion and flow control,Traffic shaping,M2M and traffic shaping,WSN,MANET,IoT",7,5.0
+Network Security and Cryptography,"RSA,Diffie-Hellman and RSA,Public-key cryptography,Symmetric cryptography,Digital certificates,VPN and digital certificates,Cyber threats and malware,Vulnerabilities,Network security",8,6.0

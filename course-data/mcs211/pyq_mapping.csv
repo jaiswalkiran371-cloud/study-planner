@@ -1,0 +1,142 @@
+Term / Paper,Question,Topic,Subtopic,Marks
+Dec 2025,Apply merge sort algorithm to sort given array elements,Divide and Conquer and Sorting Algorithms,Merge Sort,5
+Dec 2025,Explain Horner's method of polynomial evaluation with example and time complexity,Algorithm Fundamentals and Asymptotic Analysis,Polynomial Evaluation,5
+Dec 2025,Build the Huffman tree for given character frequencies,Greedy Algorithms,Huffman Coding,5
+Dec 2025,Make all possible binary search trees consisting of three keys,Divide and Conquer and Sorting Algorithms,Binary Search Trees,5
+Dec 2025,Represent a given graph using adjacency list,Graph Traversal Shortest Path and MST Algorithms,Graph Representation,5
+Dec 2025,Explain Kruskal's algorithm for Minimum Spanning Tree construction,Greedy Algorithms,Kruskal's Algorithm,5
+Dec 2025,What is Boolean Satisfiability (SAT) problem? Explain in detail,Complexity Classes and NP-Completeness,NP-Completeness,5
+Dec 2025,"Using BFS, traverse the given graph starting from a node",Graph Traversal Shortest Path and MST Algorithms,BFS,5
+Dec 2025,Write principle of optimality; explain DP for chain matrix multiplication,Dynamic Programming,Matrix Chain Multiplication,10
+Dec 2025,Define fractional Knapsack as optimization problem; write Greedy method and complexity,Greedy Algorithms,Fractional Knapsack,10
+Dec 2025,Write Dijkstra's algorithm and find minimum distances for given graph,Graph Traversal Shortest Path and MST Algorithms,Dijkstra's Algorithm,10
+Dec 2025,Write quick sort algorithm; find worst case complexity; sort given list,Divide and Conquer and Sorting Algorithms,Quick Sort,10
+Dec 2025,Write Prim's algorithm to find MST for given graph,Greedy Algorithms,Prim's Algorithm,10
+Dec 2025,"Write DFS and BFS algorithms, time complexity, and DFS traversal sequence",Graph Traversal Shortest Path and MST Algorithms,DFS,10
+Dec 2025,"Explain class P, NP and NP-complete problem with examples",Complexity Classes and NP-Completeness,P NP NP-Complete,8
+Dec 2025,"Write short notes on Backtracking, Branch and Bound, Approximation algorithms",Complexity Classes and NP-Completeness,Backtracking,12
+Dec 2024,Write Euclid's algorithm to find GCD of two natural numbers,Algorithm Fundamentals and Asymptotic Analysis,Euclid's Algorithm,5
+Dec 2024,Arrange given growth rates in increasing order,Algorithm Fundamentals and Asymptotic Analysis,Growth Rate Analysis,5
+Dec 2024,Give a recursive function to find height of binary tree and its running time,Recurrence Relations and Master Theorem,Recursive Complexity,5
+Dec 2024,Compute x^283 using left-to-right binary exponentiation,Divide and Conquer and Sorting Algorithms,Binary Exponentiation,5
+Dec 2024,Write binary search algorithm and evaluate best/worst case time complexity,Divide and Conquer and Sorting Algorithms,Binary Search,5
+Dec 2024,Find the topological ordering of the given graph,Graph Traversal Shortest Path and MST Algorithms,Topological Sort,5
+Dec 2024,Construct the Huffman tree for given letters and frequencies,Greedy Algorithms,Huffman Coding,5
+Dec 2024,What are the disadvantages of using Dijkstra's algorithm? List any four,Graph Traversal Shortest Path and MST Algorithms,Dijkstra's Algorithm,5
+Dec 2024,Define a BFS tree; give BFS traversal for given graph; applications of DFS,Graph Traversal Shortest Path and MST Algorithms,BFS,10
+Dec 2024,Write Bubble Sort algorithm; sort given sequence and count comparisons,Divide and Conquer and Sorting Algorithms,Bubble Sort,10
+Dec 2024,Write Merge Sort algorithm; apply to sort given array,Divide and Conquer and Sorting Algorithms,Merge Sort,10
+Dec 2024,Explain DP for matrix chain multiplication; apply to given matrices,Dynamic Programming,Matrix Chain Multiplication,10
+Dec 2024,Write Dijkstra's algorithm; find minimum distances from given starting node,Graph Traversal Shortest Path and MST Algorithms,Dijkstra's Algorithm,10
+Dec 2024,Solve given fractional Knapsack problem using Greedy algorithm,Greedy Algorithms,Fractional Knapsack,10
+Dec 2024,Apply Floyd Warshall algorithm to given graph; show matrix D2,Graph Traversal Shortest Path and MST Algorithms,Floyd-Warshall Algorithm,10
+Dec 2024,Binomial coefficient recurrence: write recursive function and DP algorithm; compare time,Dynamic Programming,DP Recurrence,10
+June 2024,Use mathematical induction to prove given summation formula,Algorithm Fundamentals and Asymptotic Analysis,Mathematical Induction,5
+June 2024,Write recursive binary search algorithm and analyse worst case complexity,Divide and Conquer and Sorting Algorithms,Binary Search,5
+June 2024,What is an algorithm? Explain characteristics with example,Algorithm Fundamentals and Asymptotic Analysis,Algorithm Characteristics,5
+June 2024,Multiply given two matrices using Strassen's algorithm,Divide and Conquer and Sorting Algorithms,Strassen's Algorithm,5
+June 2024,What are P and NP class of problems? Differentiate NP-Hard and NP-Complete,Complexity Classes and NP-Completeness,P NP NP-Hard NP-Complete,5
+June 2024,Explain quick sort algorithm using suitable example,Divide and Conquer and Sorting Algorithms,Quick Sort,5
+June 2024,Multiply given two numbers using Karatsuba's algorithm,Divide and Conquer and Sorting Algorithms,Karatsuba's Algorithm,5
+June 2024,What is string matching algorithm? Derive its best case time complexity,String Matching Algorithms,String Matching Basics,5
+June 2024,"What is MST? Write Prim's algorithm, complexity, and find MST of given graph",Greedy Algorithms,Prim's Algorithm,10
+June 2024,Write topological sort algorithm; obtain ordering for given graph,Graph Traversal Shortest Path and MST Algorithms,Topological Sort,10
+June 2024,Discuss importance of best-case vs worst-case analysis with example,Algorithm Fundamentals and Asymptotic Analysis,Complexity Analysis,10
+June 2024,Sort given sequence using selection sort; count comparisons and copy operations,Divide and Conquer and Sorting Algorithms,Selection Sort,10
+June 2024,Explain 0/1 Knapsack problem; solve given instance,Dynamic Programming,0/1 Knapsack,10
+June 2024,Give divide and conquer algorithm to find ith smallest element; trace on given array,Divide and Conquer and Sorting Algorithms,Order Statistics,10
+June 2024,Write Dijkstra's shortest path algorithm; apply on given graph,Graph Traversal Shortest Path and MST Algorithms,Dijkstra's Algorithm,10
+June 2024,Apply Floyd Warshall Algorithm to find shortest paths in given graph; find complexity,Graph Traversal Shortest Path and MST Algorithms,Floyd-Warshall Algorithm,10
+Dec 2023,What is Euclid's algorithm to find GCD? Write the steps,Algorithm Fundamentals and Asymptotic Analysis,Euclid's Algorithm,5
+Dec 2023,What are Big O and Big Theta notations? Explain with diagram,Algorithm Fundamentals and Asymptotic Analysis,Asymptotic Notations,5
+Dec 2023,Write and explain linear search algorithm; best/worst/average case,Divide and Conquer and Sorting Algorithms,Linear Search,5
+Dec 2023,Explain Breadth First Search algorithm with suitable example,Graph Traversal Shortest Path and MST Algorithms,BFS,5
+Dec 2023,What is Task Scheduling algorithm? Write pseudo code,Greedy Algorithms,Task Scheduling,5
+Dec 2023,Solve given recurrence relation using recursion tree method,Recurrence Relations and Master Theorem,Recursion Tree Method,5
+Dec 2023,"What are P, NP and NP-complete problems? Give example of each",Complexity Classes and NP-Completeness,P NP NP-Complete,5
+Dec 2023,What is Minimum Cost Spanning Tree? Write generic MCST algorithm,Greedy Algorithms,Minimum Cost Spanning Tree,5
+Dec 2023,What are building blocks of an algorithm? How to judge efficiency?,Algorithm Fundamentals and Asymptotic Analysis,Algorithm Building Blocks,6
+Dec 2023,"Using mathematical induction, prove sum of first n positive integers formula",Algorithm Fundamentals and Asymptotic Analysis,Mathematical Induction,6
+Dec 2023,What is polynomial evaluation? Evaluate given polynomial using Horner's rule,Algorithm Fundamentals and Asymptotic Analysis,Polynomial Evaluation,5
+Dec 2023,What is Greedy approach for problem solving? Activities in Greedy method,Greedy Algorithms,Greedy Method,6
+Dec 2023,Explain merge sort using divide and conquer; best/worst case complexities,Divide and Conquer and Sorting Algorithms,Merge Sort,8
+Dec 2023,"Explain any three of: Subgraph, Connected graph, Adjacency matrix, DAG",Graph Traversal Shortest Path and MST Algorithms,Graph Terminology,6
+Dec 2023,Show step by step execution of Dijkstra's algorithm on given directed graph,Graph Traversal Shortest Path and MST Algorithms,Dijkstra's Algorithm,6
+Dec 2023,What is string matching problem? Explain KMP algorithm and LPS array construction,String Matching Algorithms,KMP Algorithm,8
+Dec 2023,What is all pair shortest path problem? Explain Floyd Warshall algorithm,Graph Traversal Shortest Path and MST Algorithms,Floyd-Warshall Algorithm,6
+Dec 2023,Short note: Tractable vs Intractable problems,Complexity Classes and NP-Completeness,Tractable vs Intractable,5
+Dec 2023,Short note: CNF Satisfiability problem,Complexity Classes and NP-Completeness,CNF Satisfiability,5
+Dec 2023,Short note: Optimization and Decision problems,Complexity Classes and NP-Completeness,Optimization and Decision Problems,5
+Dec 2023,Short note: Prim's algorithm,Greedy Algorithms,Prim's Algorithm,5
+Dec 2023,Short note: Approximation algorithms,Complexity Classes and NP-Completeness,Approximation Algorithms,5
+Dec 2023,Short note: Master's theorem,Recurrence Relations and Master Theorem,Master's Theorem,5
+June 2023,What is an algorithm? What are its desirable characteristics?,Algorithm Fundamentals and Asymptotic Analysis,Algorithm Characteristics,5
+June 2023,What are asymptotic notations? Explain any two with examples,Algorithm Fundamentals and Asymptotic Analysis,Asymptotic Notations,5
+June 2023,Solve given recurrence relation using substitution method,Recurrence Relations and Master Theorem,Substitution Method,5
+June 2023,Write and explain binary search algorithm with example,Divide and Conquer and Sorting Algorithms,Binary Search,5
+June 2023,Explain Depth First Search algorithm with example,Graph Traversal Shortest Path and MST Algorithms,DFS,5
+June 2023,What is Dynamic Programming approach? Steps involved,Dynamic Programming,Dynamic Programming Approach,6
+June 2023,What are Optimization and Decision problems? Give example of each,Complexity Classes and NP-Completeness,Optimization and Decision Problems,5
+June 2023,Design a state space tree for given subset sum problem,Complexity Classes and NP-Completeness,State Space Tree,4
+June 2023,Explain all three cases of Master's Theorem; apply to given recurrence,Recurrence Relations and Master Theorem,Master's Theorem,8
+June 2023,Evaluate given polynomial at x=2 using Horner's rule with stepwise iterations,Algorithm Fundamentals and Asymptotic Analysis,Polynomial Evaluation,6
+June 2023,Prove given power-of-2 summation identity for all non-negative integers,Algorithm Fundamentals and Asymptotic Analysis,Mathematical Induction,6
+June 2023,What is Huffman coding? Write steps for building Huffman tree with example,Greedy Algorithms,Huffman Coding,6
+June 2023,Explain Quick sort algorithm using divide and conquer approach,Divide and Conquer and Sorting Algorithms,Quick Sort,6
+June 2023,What are strongly connected components? Explain adjacency matrix and list,Graph Traversal Shortest Path and MST Algorithms,Graph Representation,6
+June 2023,Show step by step execution of Kruskal's algorithm for given graph,Greedy Algorithms,Kruskal's Algorithm,6
+June 2023,What is Matrix chain multiplication problem? Find optimal parenthesization,Dynamic Programming,Matrix Chain Multiplication,8
+June 2023,Explain Rabin Karp Algorithm for string matching with example,String Matching Algorithms,Rabin-Karp Algorithm,6
+June 2023,Short note: Deterministic vs Non-deterministic algorithms,Complexity Classes and NP-Completeness,Deterministic vs Non-Deterministic,5
+June 2023,Short note: CLIQUE and vertex cover problem,Complexity Classes and NP-Completeness,CLIQUE and Vertex Cover,5
+June 2023,Short note: Backtracking problem with example,Complexity Classes and NP-Completeness,Backtracking,5
+June 2023,Short note: Bellman-Ford algorithm,Graph Traversal Shortest Path and MST Algorithms,Bellman-Ford Algorithm,5
+June 2023,Short note: Fractional Knapsack problem,Greedy Algorithms,Fractional Knapsack,5
+Dec 2022,Write mathematical definition of big omega; verify given f(n)=Omega(g(n)),Algorithm Fundamentals and Asymptotic Analysis,Asymptotic Notations,6
+Dec 2022,Explain principle of optimality in dynamic programming with example,Dynamic Programming,Principle of Optimality,6
+Dec 2022,Apply master method to give tight asymptotic bounds for two given recurrences,Recurrence Relations and Master Theorem,Master's Theorem,8
+Dec 2022,Run Prim's algorithm on given graph; derive complexity,Greedy Algorithms,Prim's Algorithm,10
+Dec 2022,Apply Huffman's algorithm to construct tree and optimal binary prefix code,Greedy Algorithms,Huffman Coding,10
+Dec 2022,Explain Cook-Levin's theorem on CNF-Satisfiability problem with example,Complexity Classes and NP-Completeness,Cook-Levin Theorem,10
+Dec 2022,Apply Dijkstra's single source shortest path algorithm on given graph,Graph Traversal Shortest Path and MST Algorithms,Dijkstra's Algorithm,7
+Dec 2022,What is significant feature of Bellman-Ford's algorithm not in Dijkstra's?,Graph Traversal Shortest Path and MST Algorithms,Bellman-Ford Algorithm,3
+Dec 2022,Write pseudocode for Ford-Fulkerson's algorithm for maximum bipartite matching,Graph Traversal Shortest Path and MST Algorithms,Network Flow,10
+Dec 2022,Apply partition procedure of Quicksort algorithm to given array,Divide and Conquer and Sorting Algorithms,Quick Sort,10
+Dec 2022,Apply DFS to complete graph on four vertices; list visit order,Graph Traversal Shortest Path and MST Algorithms,DFS,7
+Dec 2022,How many comparisons needed for binary search in set of 512 elements?,Divide and Conquer and Sorting Algorithms,Binary Search,3
+Dec 2022,Apply Floyd-Warshall's algorithm to given graph and show D2,Graph Traversal Shortest Path and MST Algorithms,Floyd-Warshall Algorithm,10
+Dec 2022,Describe task scheduling as optimization problem; apply to given jobs,Greedy Algorithms,Task Scheduling,10
+Dec 2022,Describe basic principle of KMP algorithm; advantage over Naive/Rabin-Karp; complexity,String Matching Algorithms,KMP Algorithm,10
+June 2025,Define algorithm; state four important characteristics,Algorithm Fundamentals and Asymptotic Analysis,Algorithm Characteristics,5
+June 2025,Write linear search algorithm; analysis for best and worst case,Divide and Conquer and Sorting Algorithms,Linear Search,5
+June 2025,Solve given recurrence equation,Recurrence Relations and Master Theorem,Recurrence Relations,5
+June 2025,What is NP class of problem? Explain with example,Complexity Classes and NP-Completeness,NP Class,5
+June 2025,What is Adjacency matrix? Write adjacency matrix for given graph,Graph Traversal Shortest Path and MST Algorithms,Graph Representation,5
+June 2025,Define big theta notation; show given identity holds,Algorithm Fundamentals and Asymptotic Analysis,Asymptotic Notations,5
+June 2025,Find optimal parenthesization of matrix-chain multiplication for given matrices,Dynamic Programming,Matrix Chain Multiplication,5
+June 2025,Explain working principle of Floyd-Warshall's algorithm,Graph Traversal Shortest Path and MST Algorithms,Floyd-Warshall Algorithm,5
+June 2025,Explain Strassen's Matrix Multiplication Algorithm; apply to given matrices,Divide and Conquer and Sorting Algorithms,Strassen's Algorithm,10
+June 2025,Write algorithm for quick sort; sort given sequence; analyze best/worst case,Divide and Conquer and Sorting Algorithms,Quick Sort,10
+June 2025,Write algorithm for merge sort; analyse best and worst case run time,Divide and Conquer and Sorting Algorithms,Merge Sort,10
+June 2025,Write and explain Prim's algorithm; find minimal spanning tree for given graph,Greedy Algorithms,Prim's Algorithm,10
+June 2025,Write algorithm for fractional Knapsack; solve given problem,Greedy Algorithms,Fractional Knapsack,10
+June 2025,Write Dijkstra's algorithm; find minimum distances from given source node,Graph Traversal Shortest Path and MST Algorithms,Dijkstra's Algorithm,10
+June 2025,Differentiate NP-complete and NP-hard; state CLIQUE and vertex-cover problems,Complexity Classes and NP-Completeness,CLIQUE and Vertex Cover,10
+June 2025,Explain use of master method; interpret all three cases with example,Recurrence Relations and Master Theorem,Master's Theorem,10
+June 2022,Calculate time complexity of given program fragments using Big Oh notation,Algorithm Fundamentals and Asymptotic Analysis,Asymptotic Notations,5
+June 2022,Explain working principle of Floyd-Warshall's algorithm,Graph Traversal Shortest Path and MST Algorithms,Floyd-Warshall Algorithm,5
+June 2022,Define topological ordering; write algorithm and find topological ordering; complexity,Graph Traversal Shortest Path and MST Algorithms,Topological Sort,10
+June 2022,Define the substitution method to solve a recurrence relation; solve given relation,Recurrence Relations and Master Theorem,Substitution Method,5
+June 2022,Write Kruskal's algorithm to find minimum cost spanning tree of given graph,Greedy Algorithms,Kruskal's Algorithm,10
+June 2022,Describe most commonly used data structure for implementing Dijkstra's algorithm,Graph Traversal Shortest Path and MST Algorithms,Dijkstra's Algorithm,5
+June 2022,Prove that subpaths of the shortest path are also shortest paths,Graph Traversal Shortest Path and MST Algorithms,Shortest Path Properties,5
+June 2022,Apply Bubble sort algorithm to given list; best and worst case complexities,Divide and Conquer and Sorting Algorithms,Bubble Sort,10
+June 2022,Write and explain procedure for maximum bipartite matching with example,Graph Traversal Shortest Path and MST Algorithms,Network Flow,7
+June 2022,"List one algorithm each for given time complexities O(m log n), O(log n), O(n^2)",Algorithm Fundamentals and Asymptotic Analysis,Asymptotic Notations,3
+June 2022,Find optimal solution to given fractional Knapsack instance; show step-by-step,Greedy Algorithms,Fractional Knapsack,10
+June 2022,Explain rolling hash function in Rabin-Karp algorithm with example,String Matching Algorithms,Rabin-Karp Algorithm,10
+June 2022,Differentiate Greedy approach and Dynamic approach for optimization problems,Dynamic Programming,Greedy vs Dynamic Programming,4
+June 2022,Formulate Traveling Salesperson and Graph Coloring as optimization and decision problems,Complexity Classes and NP-Completeness,Optimization and Decision Problems,6
+June 2022,Explain non-deterministic algorithm concept; list non-deterministic complexity class problems,Complexity Classes and NP-Completeness,Deterministic vs Non-Deterministic,8
+June 2022,Determine whether given growth rate sequence is in correct order,Algorithm Fundamentals and Asymptotic Analysis,Growth Rate Analysis,2
+June 2022,Construct optimal Huffman tree and code for given letter frequencies,Greedy Algorithms,Huffman Coding,10

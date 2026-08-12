@@ -1,0 +1,178 @@
+Term / Paper,Question,Topic,Subtopic,Marks
+December 2021,Find the CRC for the given data polynomial using the given generator polynomial.,Data Link Layer and Error Control,CRC,3
+December 2021,Define LAN and explain its typical characteristics.,"LAN, Ethernet and Wireless Networks",LAN characteristics,5
+December 2021,Explain transmission delay and propagation delay.,Data Communication Fundamentals,Transmission and propagation delays,4
+December 2021,Differentiate congestion control and flow control.,"Traffic Management, WSN, MANET and IoT",Congestion and flow control,4
+December 2021,Compare Layer 2 and Layer 3 switches.,Switching and Internetworking,Switching,5
+December 2021,Explain RSA key generation algorithm with an example.,Network Security and Cryptography,RSA,6
+December 2021,Explain QAM and draw the 8-QAM constellation.,Data Communication Fundamentals,Digital modulation,7
+December 2021,Draw the IPv4 header and explain the significance of flags.,Network Layer and Routing,IPv4 addressing and datagram,6
+December 2021,"Identify AM, FM and radar frequency bands and relate tower height to repeater distance.",Data Communication Fundamentals,Transmission media and frequency,5
+December 2021,Explain why PAM is prerequisite to PCM and find minimum sampling interval for 1 kHz.,Data Communication Fundamentals,Sampling and PCM,5
+December 2021,Explain circuit switching and packet switching with an example.,Switching and Internetworking,Circuit and packet switching,5
+December 2021,Compare star and tree network topologies.,"LAN, Ethernet and Wireless Networks",Network topologies,5
+December 2021,Define Hamming code and determine redundant bits and positions for 7-bit data.,Data Link Layer and Error Control,Error detection and correction,5
+December 2021,Define pure ALOHA and calculate slotted ALOHA throughput.,Data Link Layer and Error Control,ALOHA,5
+December 2021,Discuss IEEE 802.11 protocol.,"LAN, Ethernet and Wireless Networks",IEEE 802.11,10
+December 2021,Explain steps in connection establishment and termination for connection-oriented services.,Transport Layer and Network Services,Connection-oriented services,5
+December 2021,Explain Dijkstra's shortest-path algorithm and find the best route from A to E.,Network Layer and Routing,Dijkstra's algorithm,10
+December 2021,Explain IP address classes and rules for determining the address class.,Network Layer and Routing,IP addressing,5
+December 2021,Define multiplexing and illustrate upward multiplexing.,Data Communication Fundamentals,Multiplexing,5
+December 2021,Discuss digital certificate contents and importance.,Network Security and Cryptography,Digital certificates,5
+December 2021,Explain RPC with a suitable diagram.,Transport Layer and Network Services,RPC,10
+June 2022,Define CRC and write the given bitstring in polynomial representation.,Data Link Layer and Error Control,CRC,4
+June 2022,Explain Wireless LANs and disadvantages of radio transmitters.,"LAN, Ethernet and Wireless Networks",Wireless LAN,5
+June 2022,Define transmission media and compare optical fiber with copper wire.,Data Communication Fundamentals,Transmission media,5
+June 2022,Define burst error and explain how burst errors can be corrected.,Data Link Layer and Error Control,Error detection and correction,5
+June 2022,Explain the three types of internetwork addresses with examples.,Network Layer and Routing,Internetwork addressing,5
+June 2022,Explain Diffie-Hellman key generation and generate RSA public and private keys using 7 and 11.,Network Security and Cryptography,Diffie-Hellman and RSA,6
+June 2022,Differentiate PSK and FSK and explain quantization.,Data Communication Fundamentals,Digital modulation and quantization,5
+June 2022,Draw IPv4 header and explain the significance of fragment offset.,Network Layer and Routing,IPv4 addressing and datagram,5
+June 2022,Explain digital-to-digital encoding with an example.,Data Communication Fundamentals,Digital encoding,5
+June 2022,Explain WAN characteristics and compare client-server with peer-to-peer architecture.,Switching and Internetworking,WAN and network architecture,10
+June 2022,Explain the importance of multiplexing and list basic techniques.,Data Communication Fundamentals,Multiplexing,5
+June 2022,Define checksum and explain sliding window protocol.,Data Link Layer and Error Control,Checksum and sliding window,5
+June 2022,Explain pipelining and stop-and-wait ARQ when ACK is lost.,Data Link Layer and Error Control,ARQ and pipelining,5
+June 2022,Discuss CSMA and CSMA/CD and explain IEEE 802.3 Ethernet frame format.,"LAN, Ethernet and Wireless Networks",CSMA and Ethernet,5
+June 2022,Explain Spanning Tree and Source Routing Bridges.,"LAN, Ethernet and Wireless Networks",Bridges,5
+June 2022,Define MAC address and compare virtual circuit and datagram subnets.,Network Layer and Routing,IP addressing and datagram,5
+June 2022,Find the shortest route from A to E using the given graph.,Network Layer and Routing,Shortest-path routing,7
+June 2022,Explain Token Bucket traffic shaper.,"Traffic Management, WSN, MANET and IoT",Traffic shaping,3
+June 2022,Define fragmentation and compare interior and exterior gateway routing protocols.,Network Layer and Routing,Fragmentation and gateway routing,5
+June 2022,Define handshaking protocol and list transport-layer services.,Transport Layer and Network Services,Transport-layer services,5
+June 2022,Explain Nagle's algorithm and TCP connection establishment.,Transport Layer and Network Services,TCP and Nagle's algorithm,5
+June 2022,Define Feistel network and discuss CBC and OFB modes of operation.,Network Security and Cryptography,Symmetric cryptography,5
+June 2022,Define VPN and explain salient features of X.509 certificates.,Network Security and Cryptography,VPN and digital certificates,5
+December 2022,Explain why bit stuffing is advantageous over character stuffing and perform bit stuffing.,Data Link Layer and Error Control,Framing,5
+December 2022,"Differentiate simplex, half-duplex and full-duplex transmission modes.",Data Communication Fundamentals,Transmission modes,5
+December 2022,Define data encoding and explain three analog-signal encoding methods.,Data Communication Fundamentals,Analog modulation and encoding,5
+December 2022,Explain pipelining and selective repeat ARQ.,Data Link Layer and Error Control,ARQ and pipelining,5
+December 2022,Explain hidden-station and exposed-station problems.,"LAN, Ethernet and Wireless Networks",Wireless LAN,5
+December 2022,Explain shortest-path routing algorithm with an example.,Network Layer and Routing,Shortest-path routing,5
+December 2022,Define RPC and state important features of UDP.,Transport Layer and Network Services,RPC,5
+December 2022,Define cyber threat and list common threats in a user's system.,Network Security and Cryptography,Cyber threats and malware,5
+December 2022,"Explain synchronous, asynchronous and isochronous communication.",Data Communication Fundamentals,Transmission modes,5
+December 2022,Explain phase modulation and why AM is susceptible to noise.,Data Communication Fundamentals,Digital modulation and noise,5
+December 2022,Define multiplexing and switching and differentiate ADSL and cable.,Switching and Internetworking,Switching and internetworking,5
+December 2022,Define internetworking and differentiate star and ring topologies.,Switching and Internetworking,Internetworking and topologies,5
+December 2022,Find the CRC for the given data polynomial and generator polynomial.,Data Link Layer and Error Control,CRC,5
+December 2022,Explain stop-and-wait ARQ in normal operation and when a frame is lost.,Data Link Layer and Error Control,ARQ and pipelining,5
+December 2022,Explain slotted ALOHA and its throughput calculation.,Data Link Layer and Error Control,ALOHA,5
+December 2022,Explain the 802.11 protocol stack and source routing bridges.,"LAN, Ethernet and Wireless Networks",IEEE 802.11 and bridges,5
+December 2022,Compute end-to-end delay for the given circuit-switching network.,Switching and Internetworking,Circuit and packet switching,8
+December 2022,Explain distance-vector routing and the count-to-infinity problem.,Network Layer and Routing,Distance-vector routing,6
+December 2022,Differentiate congestion control and flow control and explain congestion control in packet-switched networks.,"Traffic Management, WSN, MANET and IoT",Congestion and flow control,6
+December 2022,Explain connectionless and connection-oriented transport services.,Transport Layer and Network Services,Connection-oriented services,5
+December 2022,Explain important UDP features and why UDP is unreliable.,Transport Layer and Network Services,UDP,5
+December 2022,Define digital signature algorithm and explain the basis of ElGamal cryptosystem.,Network Security and Cryptography,Public-key cryptography,5
+December 2022,Define firewall and explain intrusion-detection-system operation.,Network Security and Cryptography,Network security,5
+June 2023,Calculate quantized values for the given signal range and 64 quantization levels.,Data Communication Fundamentals,Quantization,5
+June 2023,Give IEEE 802.3 Ethernet frame limits and compare 10Base2 with 10BaseT.,"LAN, Ethernet and Wireless Networks",Ethernet,5
+June 2023,List and explain policies used to avoid congestion.,"Traffic Management, WSN, MANET and IoT",Congestion and flow control,5
+June 2023,Define public-key cryptography and explain RSA key generation.,Network Security and Cryptography,RSA,6
+June 2023,"Explain Virus, Worm, Trojan and Malware.",Network Security and Cryptography,Cyber threats and malware,4
+June 2023,Define noise and explain three types of transmission noise.,Data Communication Fundamentals,Noise,5
+June 2023,Define multiplexing and explain synchronous TDM.,Data Communication Fundamentals,Multiplexing,5
+June 2023,Explain Bellman-Ford algorithm with an example.,Network Layer and Routing,Bellman-Ford routing,5
+June 2023,Define transmission and propagation delays and explain fiber-optic cable.,Data Communication Fundamentals,Transmission and propagation delays,5
+June 2023,Define PCM and explain why PAM is a prerequisite.,Data Communication Fundamentals,Sampling and PCM,5
+June 2023,Differentiate circuit switching and packet switching.,Switching and Internetworking,Circuit and packet switching,5
+June 2023,List and explain OSI reference-model layers.,Switching and Internetworking,OSI model,5
+June 2023,"Explain CRC, error detection, checksum, FEC and parity check.",Data Link Layer and Error Control,Error detection and correction,5
+June 2023,Explain piggybacking and stop-and-wait ARQ when ACK is lost.,Data Link Layer and Error Control,ARQ and pipelining,5
+June 2023,Explain p-persistent CSMA and calculate slotted ALOHA throughput.,Data Link Layer and Error Control,ALOHA and CSMA,5
+June 2023,Explain transparent bridge features and bridge operation in LAN environments.,"LAN, Ethernet and Wireless Networks",Bridges,5
+June 2023,Explain network-layer services and compare virtual-circuit and datagram approaches.,Network Layer and Routing,Network-layer services,7
+June 2023,Explain IP addressing and address representations by address range.,Network Layer and Routing,IP addressing,6
+June 2023,Explain M2M communication and compare leaky-bucket and token-bucket shapers.,"Traffic Management, WSN, MANET and IoT",M2M and traffic shaping,7
+June 2023,List transport-layer services to the application layer.,Transport Layer and Network Services,Transport-layer services,4
+June 2023,Explain TCP three-way handshake.,Transport Layer and Network Services,TCP and Nagle's algorithm,6
+June 2023,Define modulo function and explain elliptic-curve cryptography.,Network Security and Cryptography,Public-key cryptography,5
+June 2023,Define vulnerability and explain browser and operating-system vulnerabilities.,Network Security and Cryptography,Vulnerabilities,5
+December 2023,Define network topology and compare star and bus topologies.,"LAN, Ethernet and Wireless Networks",Network topologies,5
+December 2023,Define Hamming code and generate the bit stream for 001100.,Data Link Layer and Error Control,Error detection and correction,5
+December 2023,Explain piggybacking with an appropriate diagram.,Data Link Layer and Error Control,Piggybacking,5
+December 2023,Differentiate CSMA/CD and CSMA/CA.,"LAN, Ethernet and Wireless Networks",CSMA and Ethernet,5
+December 2023,Compare connection-oriented and connectionless services.,Transport Layer and Network Services,Connection-oriented services,5
+December 2023,Define network congestion and explain methods to deal with it.,"Traffic Management, WSN, MANET and IoT",Congestion and flow control,5
+December 2023,Differentiate leaky-bucket and token-bucket traffic shapers.,"Traffic Management, WSN, MANET and IoT",Traffic shaping,5
+December 2023,Describe the three-way handshake mechanism.,Transport Layer and Network Services,TCP and Nagle's algorithm,5
+December 2023,Explain ATM network technology and its advantages and disadvantages.,Switching and Internetworking,ATM and switching,6
+December 2023,Discuss issues faced by signals transmitted over transmission lines.,Data Communication Fundamentals,Transmission media,6
+December 2023,"Define modulation, explain its need and types, and why AM is susceptible to noise.",Data Communication Fundamentals,Digital modulation and noise,8
+December 2023,State data-link-layer functionality and methods for framing with examples.,Data Link Layer and Error Control,Framing,7
+December 2023,Explain limitations of stop-and-wait flow control and how sliding window addresses them.,Data Link Layer and Error Control,Checksum and sliding window,6
+December 2023,Define vulnerable period and derive/graph throughput for pure and slotted ALOHA.,Data Link Layer and Error Control,ALOHA,7
+December 2023,Define IP address and compare virtual-circuit and datagram subnet.,Network Layer and Routing,IP addressing and datagram,5
+December 2023,Explain adaptive and non-adaptive routing and flooding.,Network Layer and Routing,Routing algorithms,5
+December 2023,Define count-to-infinity and explain how link-state routing addresses it.,Network Layer and Routing,Link-state routing,5
+December 2023,Explain how BGP solves count-to-infinity and name routers identified by OSPF.,Network Layer and Routing,Routing protocols,5
+December 2023,Explain quality of service provided by the transport layer.,Transport Layer and Network Services,Transport-layer services,5
+December 2023,Compare flow control and explain transport-layer flow-control and buffering.,Transport Layer and Network Services,Flow control,5
+December 2023,Explain Nagle's algorithm and how it reduces bandwidth wastage.,Transport Layer and Network Services,TCP and Nagle's algorithm,5
+December 2023,Discuss VPN standards and types.,Network Security and Cryptography,VPN and digital certificates,5
+June 2024,Differentiate analog and digital signals and draw both.,Data Communication Fundamentals,Signals,5
+June 2024,"Define vulnerable period, give pure-ALOHA throughput expression and compare pure and slotted ALOHA.",Data Link Layer and Error Control,ALOHA,5
+June 2024,"Define bridge, state when it should be used and give its characteristics.","LAN, Ethernet and Wireless Networks",Bridges,5
+June 2024,Describe transmission and propagation delays and explain fiber-optic cable.,Data Communication Fundamentals,Transmission and propagation delays,5
+June 2024,List and explain OSI reference-model layer functionalities.,Switching and Internetworking,OSI model,5
+June 2024,Explain count-to-infinity problem with an example.,Network Layer and Routing,Distance-vector routing,5
+June 2024,Explain M2M communication and compare leaky-bucket and token-bucket shapers.,"Traffic Management, WSN, MANET and IoT",M2M and traffic shaping,5
+June 2024,"Define cryptography, encryption, decryption and block cipher; give a modulo-function example.",Network Security and Cryptography,Public-key cryptography,5
+June 2024,Describe ARQ and explain stop-and-wait and selective-repeat ARQ.,Data Link Layer and Error Control,ARQ and pipelining,12
+June 2024,Explain circuit and packet switching and give a suitable circuit-switching example.,Switching and Internetworking,Circuit and packet switching,8
+June 2024,"Explain error detection, CRC and determine CRC for the given bit sequence.",Data Link Layer and Error Control,CRC,7
+June 2024,Explain Wireless LAN protocols and MACAW features.,"LAN, Ethernet and Wireless Networks",Wireless LAN,6
+June 2024,Define multiplexing and explain synchronous TDM.,Data Communication Fundamentals,Multiplexing,7
+June 2024,Explain congestion and routing and graph throughput/delay for good and poor routing.,"Traffic Management, WSN, MANET and IoT",Congestion and flow control,5
+June 2024,Explain Dijkstra's algorithm.,Network Layer and Routing,Dijkstra's algorithm,5
+June 2024,Define hierarchical routing and explain reverse-path forwarding.,Network Layer and Routing,Routing algorithms,5
+June 2024,Explain open-loop congestion-control algorithms in packet-switched networks.,"Traffic Management, WSN, MANET and IoT",Congestion and flow control,5
+June 2024,Describe services required by the application layer from the transport layer.,Transport Layer and Network Services,Transport-layer services,5
+June 2024,List important UDP features and give an example use.,Transport Layer and Network Services,UDP,5
+June 2024,Explain RPC with an appropriate block diagram.,Transport Layer and Network Services,RPC,5
+June 2024,Find the secret key using Diffie-Hellman for the given users.,Network Security and Cryptography,Diffie-Hellman and RSA,5
+December 2024,Explain the Internet backbone and how it facilitates data transmission.,Switching and Internetworking,Internet and network services,5
+December 2024,Define Internet Services and explain major categories.,Transport Layer and Network Services,Internet and network services,5
+December 2024,Describe star topology and its advantages and disadvantages.,"LAN, Ethernet and Wireless Networks",Network topologies,5
+December 2024,Define data rate and signal rate and compute bit rate for the given signal elements.,Data Communication Fundamentals,Data and signal rate,5
+December 2024,Draw constellation diagrams for 4-PSK and 4-QAM.,Data Communication Fundamentals,Digital modulation,5
+December 2024,Draw Manchester and Differential Manchester encoding for the given bit sequence.,Data Communication Fundamentals,Digital encoding,5
+December 2024,Explain why CRC is placed in the data-link trailer rather than the header.,Data Link Layer and Error Control,CRC,5
+December 2024,Illustrate the process of PCM.,Data Communication Fundamentals,Sampling and PCM,5
+December 2024,Compare 10BaseT and 10BaseF and state IEEE 802.3 frame length limits.,"LAN, Ethernet and Wireless Networks",Ethernet,5
+December 2024,Explain hidden-station and exposed-station problems.,"LAN, Ethernet and Wireless Networks",Wireless LAN,5
+December 2024,Describe bridge operations in different LAN environments.,"LAN, Ethernet and Wireless Networks",Bridges,5
+December 2024,Explain network-layer services.,Network Layer and Routing,Network-layer services,5
+December 2024,Discuss IP datagram format and IP datagram fragmentation.,Network Layer and Routing,IPv4 addressing and datagram,5
+December 2024,Discuss quality of service in transport services.,Transport Layer and Network Services,Transport-layer services,5
+December 2024,Define cryptography and explain its importance in network security.,Network Security and Cryptography,Public-key cryptography,5
+December 2024,Explain recent cyber attacks and their impacts.,Network Security and Cryptography,Cyber threats and malware,5
+December 2024,"Describe stop-and-wait flow control, its limitation and the protocol used to overcome it.",Data Link Layer and Error Control,ARQ and pipelining,8
+December 2024,Compare virtual-circuit and datagram approaches in packet switching.,Network Layer and Routing,IP addressing and datagram,6
+December 2024,Explain applications of WSN.,"Traffic Management, WSN, MANET and IoT",WSN,6
+December 2024,Define routing problem and explain shortest-path routing.,Network Layer and Routing,Dijkstra's algorithm,7
+December 2024,Differentiate traffic policy and traffic shaping.,"Traffic Management, WSN, MANET and IoT",Traffic shaping,6
+December 2024,"Describe IoT use cases in home automation, smart cities, environment and health.","Traffic Management, WSN, MANET and IoT",IoT,7
+June 2025,Discuss standard Internet protocols and their roles.,Transport Layer and Network Services,Internet and network services,5
+June 2025,Discuss signal-to-noise ratio and its significance in data transmission.,Data Communication Fundamentals,Noise,5
+June 2025,Find CRC for the given frame and generator polynomial.,Data Link Layer and Error Control,CRC,5
+June 2025,Define noise and discuss its types.,Data Communication Fundamentals,Noise,5
+June 2025,Explain the importance of transmission media.,Data Communication Fundamentals,Transmission media,4
+June 2025,Explain analog-to-analog modulation and different encoding methods for analog signals.,Data Communication Fundamentals,Analog modulation and encoding,5
+June 2025,Explain pipelining in Go-Back-N ARQ with an example.,Data Link Layer and Error Control,ARQ and pipelining,6
+June 2025,List data-link sublayers and their key functions.,Data Link Layer and Error Control,Data-link layer and framing,5
+June 2025,Discuss different types of malware.,Network Security and Cryptography,Cyber threats and malware,5
+June 2025,List challenges faced by ad-hoc networks.,"Traffic Management, WSN, MANET and IoT",MANET,5
+June 2025,Explain UDP structure and functionality.,Transport Layer and Network Services,UDP,5
+June 2025,Differentiate circuit switching and packet switching.,Switching and Internetworking,Circuit and packet switching,5
+June 2025,Draw timing diagram for piggybacking when sender and receiver both transmit data.,Data Link Layer and Error Control,Piggybacking,5
+June 2025,Give pure-ALOHA throughput expression and throughput-load graph.,Data Link Layer and Error Control,ALOHA,5
+June 2025,Discuss advantages of p-persistent CSMA.,Data Link Layer and Error Control,ALOHA and CSMA,5
+June 2025,Explain how cryptography contributes to network security.,Network Security and Cryptography,Public-key cryptography,5
+June 2025,Illustrate WSN topologies.,"Traffic Management, WSN, MANET and IoT",WSN,6
+June 2025,Explain WSN structure and classification.,"Traffic Management, WSN, MANET and IoT",WSN,7
+June 2025,Describe link-state routing and its significance.,Network Layer and Routing,Link-state routing,7
+June 2025,"Discuss admission control, traffic policing and traffic shaping.","Traffic Management, WSN, MANET and IoT",Traffic shaping,6
+June 2025,Draw MANET layer architecture and explain each layer.,"Traffic Management, WSN, MANET and IoT",MANET,7
+June 2025,Describe different data-link framing methods with examples.,Data Link Layer and Error Control,Framing,7

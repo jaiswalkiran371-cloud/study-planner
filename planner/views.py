@@ -85,7 +85,14 @@ def study_setup(request):
             return redirect('rate_courses')
     else:
         form = StudySetupForm()
-    return render(request, 'planner/study_setup.html', {'form': form})
+
+    courses_by_semester = {}
+    for c in Course.objects.filter(active=True).order_by('semester', 'course_code'):
+        courses_by_semester.setdefault(c.semester, []).append(c)
+
+    return render(request, 'planner/study_setup.html', {
+        'form': form, 'courses_by_semester': courses_by_semester
+    })
 
 
 @login_required

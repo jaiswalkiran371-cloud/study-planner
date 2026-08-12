@@ -10,19 +10,31 @@
     <a href="{% url 'plan_day_view' plan.id %}" class="btn btn-outline-secondary btn-sm">Day View</a>
 </div>
 
+<div class="accordion" id="weekAccordion">
 {% for week, sessions in grouped.items %}
-<div class="card mb-3">
-    <div class="card-header bg-white fw-semibold">Week {{ week }}</div>
-    <ul class="list-group list-group-flush">
-    {% for s in sessions %}
-        <li class="list-group-item d-flex justify-content-between">
-            <span>{{ s.date }} — {{ s.topic.name }}</span>
-            <span class="text-muted">{{ s.duration }}h</span>
-        </li>
-    {% endfor %}
-    </ul>
-</div>
+    <div class="accordion-item">
+        <h2 class="accordion-header">
+            <button class="accordion-button {% if not forloop.first %}collapsed{% endif %}" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#week{{ forloop.counter }}">
+                Week {{ week }} <span class="badge bg-secondary ms-2">{{ sessions|length }} session{{ sessions|length|pluralize }}</span>
+            </button>
+        </h2>
+        <div id="week{{ forloop.counter }}" class="accordion-collapse collapse {% if forloop.first %}show{% endif %}"
+             data-bs-parent="#weekAccordion">
+            <div class="accordion-body">
+                <ul class="list-group list-group-flush">
+                {% for s in sessions %}
+                    <li class="list-group-item d-flex justify-content-between">
+                        <span>{{ s.date }} — {{ s.topic.name }}</span>
+                        <span class="text-muted">{{ s.duration }}h</span>
+                    </li>
+                {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
 {% endfor %}
+</div>
 
 <a href="/dashboard/" class="btn btn-outline-secondary">Back to Dashboard</a>
 
