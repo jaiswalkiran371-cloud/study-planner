@@ -1,0 +1,12 @@
+Topic,Prerequisite Topic
+Logic and Mathematical Reasoning,
+"Sets, Relations and Functions",Logic and Mathematical Reasoning
+"Counting, Probability and Combinatorics","Sets, Relations and Functions"
+Pigeonhole and Inclusion-Exclusion Principles,"Counting, Probability and Combinatorics"
+Recurrence Relations and Algorithms,Logic and Mathematical Reasoning
+Recurrence Relations and Algorithms,"Counting, Probability and Combinatorics"
+Graph Theory,"Sets, Relations and Functions"
+Graph Theory,"Counting, Probability and Combinatorics"
+Boolean Algebra and Logic Circuits,Logic and Mathematical Reasoning
+Formal Languages and Finite Automata,Logic and Mathematical Reasoning
+Turing Machines and Computability,Formal Languages and Finite Automata

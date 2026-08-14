@@ -345,3 +345,77 @@ def check_capacity(total_hours_required, total_hours_available):
         return True, 0
     shortage = round(total_hours_required - total_hours_available, 2)
     return False, shortage
+
+def generate_combined_schedule(courses_with_ratings, exam_date, daily_hours, start_date=None):
+    """
+    Schedules ALL topics from ALL selected courses into a single shared
+    daily time budget, ranking every eligible topic (across every course)
+    by priority score together. Applies a basic fairness rule: won't
+    schedule more than 2 consecutive blocks from the same course if
+    another eligible course has work waiting.
+    """
+    if start_date is None:
+        start_date = date_cls.today()
+
+    all_topics = []
+    remaining_work = {}
+    topic_course_map = {}
+    for course, rating in courses_with_ratings.items():
+        for t in Topic.objects.filter(course=course):
+            all_topics.append(t)
+            remaining_work[t.id] = float(t.estimated_hours)
+            topic_course_map[t.id] = course
+
+    completed_ids = []
+    schedule = []
+    current_date = start_date
+    max_days = (exam_date - start_date).days
+    days_scheduled = 0
+
+    while remaining_work and days_scheduled < max_days:
+        day_capacity = float(daily_hours)
+        last_course = None
+        consecutive_count = 0
+
+        while day_capacity > 0:
+            # Rank eligible topics across ALL courses together
+            candidates = []
+            for course, rating in courses_with_ratings.items():
+                ranked = rank_eligible_topics(course, completed_ids, rating)
+                for t in ranked:
+                    if remaining_work.get(t.id, 0) > 0:
+                        priority = calculate_priority_score(t, rating)
+                        candidates.append((priority, t.learning_order, t))
+            if not candidates:
+                break
+            candidates.sort(key=lambda x: (-x[0], x[1]))
+
+            # Fairness: skip past a 3rd-in-a-row same-course topic if a
+            # different course has eligible work waiting
+            chosen = candidates[0][2]
+            if last_course == topic_course_map[chosen.id] and consecutive_count >= 2:
+                alt = next((c for (p, o, c) in candidates if topic_course_map[c.id] != last_course), None)
+                if alt:
+                    chosen = alt
+
+            block = min(MAX_BLOCK_HOURS, remaining_work[chosen.id], day_capacity)
+            block = round(block, 2)
+
+            schedule.append({'date': current_date, 'topic': chosen, 'duration': block})
+            remaining_work[chosen.id] -= block
+            day_capacity -= block
+
+            if topic_course_map[chosen.id] == last_course:
+                consecutive_count += 1
+            else:
+                consecutive_count = 1
+            last_course = topic_course_map[chosen.id]
+
+            if remaining_work[chosen.id] <= 0:
+                del remaining_work[chosen.id]
+                completed_ids.append(chosen.id)
+
+        current_date += timedelta(days=1)
+        days_scheduled += 1
+
+    return schedule

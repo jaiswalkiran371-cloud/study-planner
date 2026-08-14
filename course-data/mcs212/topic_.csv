@@ -1,0 +1,10 @@
+Topic,Subtopic,Learning Order,Estimated Hours
+Logic and Mathematical Reasoning,"Propositions, Logical Connectives, Truth Tables, Logical Equivalence, Tautology and Contradiction, Predicate Logic, Quantifiers, Proof Techniques, DNF and CNF",1,5
+"Sets, Relations and Functions","Set Operations, Power Sets, Relations, Equivalence Relations, Functions, Domain, Codomain and Range, Function Composition, Inverse Functions",2,4
+"Counting, Probability and Combinatorics","Addition Principle, Multiplication Principle, Permutations, Combinations, Circular Permutations, Probability, Stirling Numbers",3,5
+Pigeonhole and Inclusion-Exclusion Principles,"Pigeonhole Principle, Generalized Pigeonhole Principle, Inclusion-Exclusion Principle, Derangements, Applications",4,4
+Recurrence Relations and Algorithms,"Recurrence Relations, Degree and Order, Iterative Solutions, Mathematical Induction, Divide-and-Conquer, Binary Search, Floyd-Warshall, Dynamic Programming, Tower of Hanoi",5,6
+Graph Theory,"Graph Terminology, Degree, Paths, Circuits and Cycles, Subgraphs, Spanning Trees, Bipartite Graphs, Isomorphism, Planar Graphs, Connectivity, Eulerian Graphs, Hamiltonian Graphs, Coloring",6,7
+Boolean Algebra and Logic Circuits,"Boolean Algebra Laws, Boolean Expressions, De Morgan's Laws, Logic Gates, Logic Circuits, Switching Circuits, Truth Tables",7,4
+Formal Languages and Finite Automata,"Finite Automata, DFA, NFA, State Transition Tables, Regular Expressions, Kleene Closure, Mealy Machines, Moore Machines",8,6
+Turing Machines and Computability,"Turing Machines, Turing Acceptable Languages, Turing Decidable Languages, Undecidable Problems, Halting Problem, P and NP Classes",9,5

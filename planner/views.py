@@ -126,7 +126,6 @@ def generate_plan(request):
 
     budget = calculate_time_budget(exam_date, daily_hours)
 
-    # Check capacity BEFORE generating anything
     total_required = sum(float(t.estimated_hours) for c in courses for t in Topic.objects.filter(course=c))
     fits, shortage = check_capacity(total_required, budget['learning_hours'])
 
@@ -135,30 +134,25 @@ def generate_plan(request):
         exam_date=exam_date, daily_hours=daily_hours
     )
 
+    courses_with_ratings = {
+        c: UserCourseRating.objects.get(user=request.user, course=c).rating for c in courses
+    }
+
+    from .planning_engine import generate_combined_schedule
+    schedule = generate_combined_schedule(courses_with_ratings, exam_date, daily_hours, start_date=date.today())
+
     all_studied_topics = []
-    current_start = date.today()
-    for course in courses:
-        rating_obj = UserCourseRating.objects.get(user=request.user, course=course)
-        schedule = generate_schedule(
-            course, student_rating=rating_obj.rating,
-            exam_date=exam_date, daily_hours=daily_hours,
-            start_date=current_start
+    for s in schedule:
+        StudySession.objects.create(
+            plan=plan, topic=s['topic'], date=s['date'],
+            duration=s['duration'], session_type='learning'
         )
-        for s in schedule:
-            StudySession.objects.create(
-                plan=plan, topic=s['topic'], date=s['date'],
-                duration=s['duration'], session_type='learning'
-            )
-            if s['topic'] not in all_studied_topics:
-                all_studied_topics.append(s['topic'])
+        if s['topic'] not in all_studied_topics:
+            all_studied_topics.append(s['topic'])
 
-    # Now add revision sessions using the reserved hours from Day 8's budget
-    rating_lookup = {c.id: UserCourseRating.objects.get(user=request.user, course=c).rating for c in courses}
-    avg_rating = sum(rating_lookup.values()) / len(rating_lookup) if rating_lookup else 5
-
+    avg_rating = sum(courses_with_ratings.values()) / len(courses_with_ratings) if courses_with_ratings else 5
     revision_sessions = generate_revision_sessions(
-        courses.first(), all_studied_topics, exam_date,
-        budget['revision_hours'], avg_rating
+        courses.first(), all_studied_topics, exam_date, budget['revision_hours'], avg_rating
     )
     for s in revision_sessions:
         StudySession.objects.create(
@@ -167,7 +161,7 @@ def generate_plan(request):
         )
 
     if not fits:
-        messages.warning(request, f"Heads up: your selected courses need {shortage}h more than your available time before the exam. This is the best feasible plan given your constraints.")
+        messages.warning(request, f"Heads up: your selected courses need {shortage}h more than your available time before the exam.")
 
     return redirect('plan_day_view', plan_id=plan.id)
 

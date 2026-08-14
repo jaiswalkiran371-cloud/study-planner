@@ -1,0 +1,184 @@
+Term / Paper,Question,Topic,Subtopic,Marks
+December 2025,Verify whether [(p → q) ∧ ~q] → ~p is a tautology.,Logic and Mathematical Reasoning,Tautology and contradiction,5
+December 2025,Show that √17 is irrational.,Logic and Mathematical Reasoning,Proof by contradiction,5
+December 2025,Construct a logic circuit and truth table for the given expression.,Boolean Algebra and Logic Circuits,Logic circuits and truth tables,5
+December 2025,Describe symmetric difference of two sets with an example and Venn diagram.,"Sets, Relations and Functions",Set operations,5
+December 2025,Define Kleene closure and find it for the given alphabets.,Formal Languages and Finite Automata,Kleene closure,5
+December 2025,Differentiate permutation and combination; find circular arrangements of 9 persons.,"Counting, Probability and Combinatorics",Permutations and combinations,5
+December 2025,State the Generalized Pigeonhole Principle.,Pigeonhole and Inclusion-Exclusion Principles,Generalized Pigeonhole Principle,5
+December 2025,Solve the given recurrence relation and show the closed form.,Recurrence Relations and Algorithms,Recurrence relations,5
+December 2025,State and prove the Handshaking Theorem.,Graph Theory,Handshaking theorem,7
+December 2025,"Describe walk, path, circuit and cycle with examples.",Graph Theory,"Paths, circuits and cycles",8
+December 2025,"Determine whether a subgraph of a bipartite graph is bipartite, with reasons.",Graph Theory,Bipartite graphs,5
+December 2025,Differentiate Eulerian graph and Eulerian circuit and produce an Eulerian circuit.,Graph Theory,Eulerian graphs,7
+December 2025,Is a Hamiltonian graph Eulerian? Give reasons.,Graph Theory,Hamiltonian graphs,5
+December 2025,Define Hamiltonian graphs and explain Dirac's and Ore's criteria.,Graph Theory,Hamiltonian graphs and criteria,8
+December 2025,Use mathematical induction to prove 2^n > n^3 for n ≥ 10.,Logic and Mathematical Reasoning,Mathematical induction,8
+December 2025,Find the inverse of the given function.,"Sets, Relations and Functions",Inverse functions,6
+December 2025,Define P and NP complexity classes with examples.,Turing Machines and Computability,P and NP classes,6
+December 2025,"Prepare a state transition table, derive the regular expression, and test the given string.",Formal Languages and Finite Automata,Finite automata and regular expressions,5
+December 2025,"Write short notes on vertex colouring, Inclusion-Exclusion, undecidable problem, Mealy machines and symmetric relations.",Graph Theory,Graph coloring,3
+December 2025,Write a short note on the Inclusion-Exclusion Principle.,Pigeonhole and Inclusion-Exclusion Principles,Inclusion-Exclusion Principle,3
+December 2025,Write a short note on undecidable problem.,Turing Machines and Computability,Undecidable problems,3
+December 2025,Write a short note on Mealy machines.,Formal Languages and Finite Automata,Mealy machines,3
+December 2025,Write a short note on symmetric relations.,"Sets, Relations and Functions",Relations,3
+June 2025,Create a truth table for the given logical expression.,Logic and Mathematical Reasoning,Truth tables,5
+June 2025,"Using contradiction, prove that √3 is irrational.",Logic and Mathematical Reasoning,Proof by contradiction,5
+June 2025,Find the symmetric difference of M and N.,"Sets, Relations and Functions",Set operations,5
+June 2025,Construct a DFA accepting the complement of a language recognized by a DFA.,Formal Languages and Finite Automata,DFA,5
+June 2025,Solve T(n)=2T(n−1)−1 with T(1)=3.,Recurrence Relations and Algorithms,Recurrence relations,5
+June 2025,"Arrange ALGORITHM so that vowels A,O,I are together.","Counting, Probability and Combinatorics",Permutations and combinations,5
+June 2025,Color the given 5-cycle using three colors so adjacent vertices differ.,Graph Theory,Graph coloring,5
+June 2025,Determine whether K5 is Eulerian and explain.,Graph Theory,Eulerian graphs,5
+June 2025,Explain Kleene closure with an example.,Formal Languages and Finite Automata,Kleene closure,5
+June 2025,State five laws of Boolean algebra.,Boolean Algebra and Logic Circuits,Boolean algebra laws,5
+June 2025,Find the recurrence relation for the number of rounds in a knockout tournament.,Recurrence Relations and Algorithms,Recurrence relations,5
+June 2025,Determine whether the given bipartite graph is complete.,Graph Theory,Bipartite graphs,5
+June 2025,Prove the given logical equivalence.,Logic and Mathematical Reasoning,Logical equivalence,5
+June 2025,Describe chromatic number and find it for the given graph.,Graph Theory,Graph coloring,5
+June 2025,Write short notes on Euler graph and Hamiltonian graph.,Graph Theory,Eulerian graphs,5
+June 2025,"Count 2-digit even numbers from 1,2,3,4,5 with repetition allowed.","Counting, Probability and Combinatorics",Counting principles,5
+June 2025,Prove the two De Morgan laws using truth tables.,Boolean Algebra and Logic Circuits,De Morgan's laws,5
+June 2025,"Explain paths, circuits, cycles and spanning trees with examples.",Graph Theory,"Paths, circuits and cycles",10
+June 2025,Explain Mealy and Moore machines with examples.,Formal Languages and Finite Automata,Mealy and Moore machines,5
+June 2025,Explain the implication of an algorithm not running on a Turing Machine for arbitrary space and time.,Turing Machines and Computability,Computability,5
+June 2025,Generate the recurrence relation for Fibonacci series and find first five terms.,Recurrence Relations and Algorithms,Recurrence relations,10
+December 2024,Prove √2 is irrational using contradiction.,Logic and Mathematical Reasoning,Proof by contradiction,5
+December 2024,Construct a truth table for the given expression.,Logic and Mathematical Reasoning,Truth tables,5
+December 2024,Explain complement of a set and find the complement of the even integers.,"Sets, Relations and Functions",Set operations,5
+December 2024,"Build a finite automaton accepting baa, ab and abb only and write its regular expression.",Formal Languages and Finite Automata,Finite automata and regular expressions,5
+December 2024,Verify by induction the solution of T(n)=2T(n−1)+1.,Recurrence Relations and Algorithms,Mathematical induction,5
+December 2024,Arrange 5 red and 3 blue balls in a row.,"Counting, Probability and Combinatorics",Permutations and combinations,5
+December 2024,State and prove Handshaking theorem.,Graph Theory,Handshaking theorem,5
+December 2024,Determine whether C5 is Hamiltonian.,Graph Theory,Hamiltonian graphs,5
+December 2024,"Find Kleene closure of L={a,aa,aaa}.",Formal Languages and Finite Automata,Kleene closure,5
+December 2024,State Pigeonhole Principle and distinguish it from the Generalized Pigeonhole Principle.,Pigeonhole and Inclusion-Exclusion Principles,Pigeonhole Principle,5
+December 2024,Differentiate Turing Acceptable and Turing Decidable languages.,Turing Machines and Computability,Turing acceptable and decidable languages,5
+December 2024,Define bipartite graph and find its maximum possible edges for the given partition.,Graph Theory,Bipartite graphs,5
+December 2024,Prove equivalence of the two propositions about good and cheap mobile phones.,Logic and Mathematical Reasoning,Logical equivalence,5
+December 2024,Prove the given logical equivalence.,Logic and Mathematical Reasoning,Logical equivalence,5
+December 2024,Describe vertex colouring and find chromatic number.,Graph Theory,Graph coloring,5
+December 2024,Write short notes on planar graph and isomorphism.,Graph Theory,Planar graphs and isomorphism,5
+December 2024,Count signals made from 6 differently coloured flags using 2 flags in sequence.,"Counting, Probability and Combinatorics",Permutations and combinations,5
+December 2024,Differentiate predicate and propositional logic and give De Morgan laws for both.,Logic and Mathematical Reasoning,Predicate logic,5
+December 2024,Design a Boolean circuit for the given truth table.,Boolean Algebra and Logic Circuits,Logic circuits and truth tables,4
+December 2024,Differentiate Eulerian and Hamiltonian graphs and give Dirac and Ore criteria.,Graph Theory,Eulerian and Hamiltonian graphs,6
+December 2024,Explain nondeterministic finite automata and Kleene closure.,Formal Languages and Finite Automata,NFA and Kleene closure,5
+December 2024,Verify the proposed solution of the recurrence relation.,Recurrence Relations and Algorithms,Recurrence relations,5
+December 2024,Write notes on undecidable problem and halting problem.,Turing Machines and Computability,Undecidable and halting problems,10
+June 2023,Apply precedence rules and write the truth table for the expression.,Logic and Mathematical Reasoning,Truth tables,4
+June 2023,Compare predicate and propositional logic and write De Morgan laws for both.,Logic and Mathematical Reasoning,Predicate logic,4
+June 2023,Prove the given logical equivalence without a truth table.,Logic and Mathematical Reasoning,Logical equivalence,4
+June 2023,State the principle of optimality and its satisfiability condition.,Recurrence Relations and Algorithms,Dynamic programming,4
+June 2023,Explain Disjunctive Normal Form with an example.,Logic and Mathematical Reasoning,DNF and CNF,4
+June 2023,Find composition of the given functions and f/g.,"Sets, Relations and Functions",Function composition,4
+June 2023,Define regular expression and give rules for developing one.,Formal Languages and Finite Automata,Regular expressions,4
+June 2023,Discuss Turing Acceptable and Turing Decidable languages.,Turing Machines and Computability,Turing acceptable and decidable languages,4
+June 2023,Choose two persons as Chairman and Vice-Chairman from 35 people.,"Counting, Probability and Combinatorics",Permutations and combinations,4
+June 2023,Use induction to show the iterative expression for the recursive recurrence.,Recurrence Relations and Algorithms,Mathematical induction,4
+June 2023,Represent propositions and their negations using logical quantifiers.,Logic and Mathematical Reasoning,Quantifiers,8
+June 2023,Write pseudocode for Floyd-Warshall and discuss its working and best case.,Recurrence Relations and Algorithms,Floyd-Warshall algorithm,7
+June 2023,Draw the logical circuit and truth table for the expression.,Boolean Algebra and Logic Circuits,Logic circuits and truth tables,5
+June 2023,Differentiate function and relation; determine whether every relation is a function.,"Sets, Relations and Functions",Relations and functions,5
+June 2023,Draw the state transition table for the finite automaton and find its regular expression.,Formal Languages and Finite Automata,Finite automata and regular expressions,5
+June 2023,Write short notes on undecidable problem and halting problem.,Turing Machines and Computability,Undecidable and halting problems,10
+June 2023,Arrange five married couples around a round table with alternating genders.,"Counting, Probability and Combinatorics",Circular permutations,5
+June 2023,Use pigeonhole principle to prove existence of two disjoint subsets with equal sum.,Pigeonhole and Inclusion-Exclusion Principles,Pigeonhole Principle,5
+June 2023,Explain surjective functions and application of Inclusion-Exclusion.,Pigeonhole and Inclusion-Exclusion Principles,Inclusion-Exclusion Principle,5
+June 2023,Solve the given recurrence relation.,Recurrence Relations and Algorithms,Recurrence relations,5
+June 2023,Write notes on isomorphic graphs and conditions of isomorphism.,Graph Theory,Isomorphism,4
+June 2023,Write notes on subgraph and spanning subgraph.,Graph Theory,Subgraphs and spanning trees,4
+June 2023,Write notes on paths and circuits in a graph.,Graph Theory,"Paths, circuits and cycles",4
+June 2023,Write notes on Eulerian graph and Eulerian circuit.,Graph Theory,Eulerian graphs,4
+June 2023,Write notes on Hamiltonian graph and Dirac's criterion.,Graph Theory,Hamiltonian graphs and criteria,4
+June 2023,Write notes on map colouring problem.,Graph Theory,Graph coloring,4
+December 2023,Apply precedence rules and write truth table.,Logic and Mathematical Reasoning,Truth tables,4
+December 2023,Show the given proposition is a tautology without using a truth table.,Logic and Mathematical Reasoning,Tautology and contradiction,4
+December 2023,Define dynamic programming and its four major steps.,Recurrence Relations and Algorithms,Dynamic programming,4
+December 2023,Explain Conjunctive Normal Form with an example.,Logic and Mathematical Reasoning,DNF and CNF,4
+December 2023,Find inverse of the given function.,"Sets, Relations and Functions",Inverse functions,4
+December 2023,Find Kleene closure for the given alphabets.,Formal Languages and Finite Automata,Kleene closure,4
+December 2023,Define a Turing machine and explain its six-tuple components.,Turing Machines and Computability,Turing machines,4
+December 2023,Calculate probabilities for mutually exclusive events A and B.,"Counting, Probability and Combinatorics",Probability,4
+December 2023,State Pigeonhole and Inclusion-Exclusion principles.,Pigeonhole and Inclusion-Exclusion Principles,Pigeonhole and Inclusion-Exclusion principles,4
+December 2023,State and prove Handshaking theorem.,Graph Theory,Handshaking theorem,4
+December 2023,Express a compound proposition and prove it is a tautology using logical equivalence.,Logic and Mathematical Reasoning,Logical equivalence,7
+December 2023,Write Floyd-Warshall algorithm and apply it to find shortest paths.,Recurrence Relations and Algorithms,Floyd-Warshall algorithm,8
+December 2023,"Realize AND, OR and NOT using switches and give truth tables.",Boolean Algebra and Logic Circuits,Switching circuits,5
+December 2023,Prove that the power set of an n-element set has 2^n elements.,"Sets, Relations and Functions",Power sets,5
+December 2023,Compare Moore and Mealy machines.,Formal Languages and Finite Automata,Mealy and Moore machines,5
+December 2023,Explain Turing machine components with a block diagram.,Turing Machines and Computability,Turing machines,10
+December 2023,Select captain and vice-captain from the same team across three teams.,"Counting, Probability and Combinatorics",Counting principles,5
+December 2023,Use pigeonhole principle in an equilateral-triangle distance argument.,Pigeonhole and Inclusion-Exclusion Principles,Pigeonhole Principle,5
+December 2023,Apply Inclusion-Exclusion to count derangements.,Pigeonhole and Inclusion-Exclusion Principles,Inclusion-Exclusion Principle,5
+December 2023,Show the recurrence relation gives the comparison count for sorting n integers.,Recurrence Relations and Algorithms,Recurrence relations,5
+December 2023,Explain bipartite graph and applications.,Graph Theory,Bipartite graphs,4
+December 2023,Explain circuits and cycles in a graph.,Graph Theory,"Paths, circuits and cycles",4
+December 2023,Explain edge connectivity and edge traceability.,Graph Theory,Connectivity,4
+December 2023,Explain Hamiltonian graph and Ore's criterion.,Graph Theory,Hamiltonian graphs and criteria,4
+December 2023,Explain travelling salesman problem.,Graph Theory,Travelling salesman problem,4
+December 2023,Explain planar graphs.,Graph Theory,Planar graphs,4
+June 2023,Verify that one expression is a contradiction and another is a tautology.,Logic and Mathematical Reasoning,Tautology and contradiction,5
+June 2023,Reduce the given Boolean expression to simplest form.,Boolean Algebra and Logic Circuits,Boolean algebra,5
+June 2023,Find the inverse of f(x)=x^3−3.,"Sets, Relations and Functions",Inverse functions,5
+June 2023,"Define Kleene closure and find it for {0,1}.",Formal Languages and Finite Automata,Kleene closure,5
+June 2023,Use multiplication principle to choose President and Vice President from 35 members.,"Counting, Probability and Combinatorics",Multiplication principle,5
+June 2023,Discuss Inclusion-Exclusion principle with an example.,Pigeonhole and Inclusion-Exclusion Principles,Inclusion-Exclusion Principle,5
+June 2023,Explain Eulerian graph with a diagram.,Graph Theory,Eulerian graphs,5
+June 2023,Define tautology and prove the given expression is one.,Logic and Mathematical Reasoning,Tautology and contradiction,5
+June 2023,Use induction to prove the given recurrence expression.,Recurrence Relations and Algorithms,Mathematical induction,5
+June 2023,Find the number of ways to divide 20 employees into 3 groups.,"Counting, Probability and Combinatorics",Combinations,5
+June 2023,Explain isomorphic graphs with an example.,Graph Theory,Isomorphism,5
+June 2023,Show that C6 is bipartite.,Graph Theory,Bipartite graphs,5
+June 2023,Check logical equivalence of two propositions.,Logic and Mathematical Reasoning,Logical equivalence,5
+June 2023,Find or construct a graph with chromatic number 5.,Graph Theory,Graph coloring,5
+June 2023,Write short notes on Hamiltonian graph and Vertex Cover Problem.,Graph Theory,Hamiltonian graphs,5
+June 2023,Show the number of words of length n over an alphabet of m letters is m^n.,"Counting, Probability and Combinatorics",Multiplication principle,5
+June 2023,Construct the logic circuit and truth table for the expression.,Boolean Algebra and Logic Circuits,Logic circuits and truth tables,10
+June 2023,Design Boolean circuits for AND and OR gates using switches.,Boolean Algebra and Logic Circuits,Switching circuits,5
+June 2023,Discuss finite automata and regular expressions with examples.,Formal Languages and Finite Automata,Finite automata and regular expressions,5
+June 2023,Differentiate Turing Acceptable and Turing Decidable languages.,Turing Machines and Computability,Turing acceptable and decidable languages,5
+June 2023,Determine recurrence and iterative relations for comparison count in sorting.,Recurrence Relations and Algorithms,Recurrence relations,10
+December 2022,Differentiate predicate and proposition and give De Morgan laws.,Logic and Mathematical Reasoning,Predicate logic,5
+December 2022,Use De Morgan law to derive AND gate from NOR gate.,Boolean Algebra and Logic Circuits,De Morgan's laws,5
+December 2022,State conditions for a relation to be an equivalence relation.,"Sets, Relations and Functions",Equivalence relations,5
+December 2022,Prove S*=(S*)*=S** for a set of strings.,Formal Languages and Finite Automata,Kleene closure,5
+December 2022,Discuss nondeterministic Turing machine.,Turing Machines and Computability,Turing machines,5
+December 2022,Use addition principle to select President and Vice President from parties.,"Counting, Probability and Combinatorics",Addition principle,5
+December 2022,Find the power set of the given sets.,"Sets, Relations and Functions",Power sets,5
+December 2022,Discuss Pigeonhole principle with example.,Pigeonhole and Inclusion-Exclusion Principles,Pigeonhole Principle,5
+December 2022,Verify the given identity using induction.,Logic and Mathematical Reasoning,Mathematical induction,5
+December 2022,"Define Stirling number of the second kind and calculate S(3,2) and S(5,2).","Counting, Probability and Combinatorics",Stirling numbers,4
+December 2022,Explain Handshaking theorem with example.,Graph Theory,Handshaking theorem,5
+December 2022,Verify De Morgan's law for propositions.,Logic and Mathematical Reasoning,Logical equivalence,5
+December 2022,Count three-letter words and impose ending/middle constraints.,"Counting, Probability and Combinatorics",Permutations and combinations,7
+December 2022,Define regular expression and construct expressions for given languages.,Formal Languages and Finite Automata,Regular expressions,8
+December 2022,Differentiate DFA and NFA; compare Moore and Mealy machines.,Formal Languages and Finite Automata,DFA and NFA,10
+December 2022,Briefly discuss the Halting problem.,Turing Machines and Computability,Halting problem,5
+December 2022,Count ordered draws of 8 balls from a box with repeated colors.,"Counting, Probability and Combinatorics",Permutations and combinations,5
+December 2022,Determine recurrence and iterative relation for the power set of S.,Recurrence Relations and Algorithms,Recurrence relations,10
+December 2022,"Write notes on path, circuits, cycles, degree and regularity of graph.",Graph Theory,Graph terminology,10
+June 2022,Write mathematical notation for sets of odd numbers and natural numbers whose square exceeds 26.,"Sets, Relations and Functions",Set notation,4
+June 2022,Test logical equivalence by constructing a truth table.,Logic and Mathematical Reasoning,Logical equivalence,5
+June 2022,Prove 1+2+...+n=n(n+1)/2 by mathematical induction.,Logic and Mathematical Reasoning,Mathematical induction,5
+June 2022,Define regular expression with an example.,Formal Languages and Finite Automata,Regular expressions,5
+June 2022,Find permutations of all letters of ASSESSES.,"Counting, Probability and Combinatorics",Permutations and combinations,3
+June 2022,Find probabilities for specified outcomes of a die.,"Counting, Probability and Combinatorics",Probability,4
+June 2022,Define Tower of Hanoi and explain its recurrence relation.,Recurrence Relations and Algorithms,Tower of Hanoi,6
+June 2022,Draw the hypercube graph Q3.,Graph Theory,Graph terminology,3
+June 2022,Determine whether two given graphs are isomorphic.,Graph Theory,Isomorphism,5
+June 2022,Define degree and order of a recurrence relation and determine them for given relations.,Recurrence Relations and Algorithms,Degree and order,6
+June 2022,"Define finite automata, explain its need and representation with example.",Formal Languages and Finite Automata,Finite automata,8
+June 2022,Explain divide-and-conquer and apply it to binary search.,Recurrence Relations and Algorithms,Divide-and-conquer,6
+June 2022,Define proposition and explain disjunction and conjunction with truth tables.,Logic and Mathematical Reasoning,Propositions and logical connectives,6
+June 2022,Prove by direct proof that the square of an even integer is even.,Logic and Mathematical Reasoning,Direct proof,6
+June 2022,Draw the Boolean circuit for the given expression.,Boolean Algebra and Logic Circuits,Logic circuits and truth tables,8
+June 2022,Show intersection and difference of two sets using Venn diagrams.,"Sets, Relations and Functions",Set operations,4
+June 2022,"Define domain, codomain and range and find them for the given function.","Sets, Relations and Functions","Domain, codomain and range",6
+June 2022,Count committees with 2 male and 2 female workers.,"Counting, Probability and Combinatorics",Combinations,4
+June 2022,Use pigeonhole principle to prove five people share the same weekday of birth.,Pigeonhole and Inclusion-Exclusion Principles,Generalized Pigeonhole Principle,3
+June 2022,Find the number of four-digit even numbers.,"Counting, Probability and Combinatorics",Counting principles,3
+June 2022,"Define complete graph, star topology and degree of a vertex.",Graph Theory,Graph terminology,6
+June 2022,Find the complement of the given graph.,Graph Theory,Graph operations,5
+June 2022,Define bipartite graph with an example.,Graph Theory,Bipartite graphs,4
+June 2022,Differentiate Eulerian graph and Eulerian circuit and find an Eulerian circuit.,Graph Theory,Eulerian graphs,5
