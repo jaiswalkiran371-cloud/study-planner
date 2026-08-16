@@ -85,6 +85,7 @@ def study_setup(request):
             return redirect('rate_courses')
     else:
         form = StudySetupForm()
+        return render(request, 'planner/study_setup.html', {'form': form})
 
     courses_by_semester = {}
     for c in Course.objects.filter(active=True).order_by('semester', 'course_code'):
@@ -109,8 +110,17 @@ def rate_courses(request):
             )
         return redirect('generate_plan')
 
-    return render(request, 'planner/rate_courses.html', {'courses': courses})
+    course_data = []
+    for course in courses:
+        top_topics = Topic.objects.filter(course=course).order_by('-importance')[:3]
+        sample_questions = PYQQuestion.objects.filter(course=course).order_by('-year')[:2]
+        course_data.append({
+            'course': course,
+            'topics': top_topics,
+            'questions': sample_questions,
+        })
 
+    return render(request, 'planner/rate_courses.html', {'course_data': course_data})
 
 from .planning_engine import (
     calculate_time_budget, PlanValidationError, generate_schedule,

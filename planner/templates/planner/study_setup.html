@@ -8,34 +8,51 @@
     <div class="card shadow-sm">
         <div class="card-body p-4">
             <form method="post">
-                {% csrf_token %}
+    {% csrf_token %}
 
-                <div class="mb-3">
-                    <label class="form-label">{{ form.exam_date.label }}</label>
-                    {{ form.exam_date }}
-                </div>
-                <div class="mb-3">
-                    <label class="form-label">{{ form.daily_hours.label }}</label>
-                    {{ form.daily_hours }}
-                </div>
+    {% if form.non_field_errors %}
+    <div class="alert alert-danger">
+        {% for error in form.non_field_errors %}
+            {{ error }}
+        {% endfor %}
+    </div>
+    {% endif %}
 
-                <label class="form-label fw-semibold">Select Courses</label>
-                {% for semester, courses in courses_by_semester.items %}
-                <div class="card mb-3">
-                    <div class="card-header bg-white fw-semibold">Semester {{ semester }}</div>
-                    <div class="card-body">
-                        {% for course in courses %}
-                        <div class="form-check">
-                            <input type="checkbox" class="form-check-input" name="courses" value="{{ course.id }}" id="course_{{ course.id }}">
-                            <label class="form-check-label" for="course_{{ course.id }}">{{ course.course_name }} ({{ course.course_code }})</label>
-                        </div>
-                        {% endfor %}
-                    </div>
-                </div>
-                {% endfor %}
+    <div class="mb-3">
+        <label class="form-label">{{ form.exam_date.label }}</label>
+        {{ form.exam_date }}
+        {% if form.exam_date.errors %}
+        <div class="text-danger small mt-1">{{ form.exam_date.errors.0 }}</div>
+        {% endif %}
+    </div>
+    <div class="mb-3">
+        <label class="form-label">{{ form.daily_hours.label }}</label>
+        {{ form.daily_hours }}
+        {% if form.daily_hours.errors %}
+        <div class="text-danger small mt-1">{{ form.daily_hours.errors.0 }}</div>
+        {% endif %}
+    </div>
 
-                <button type="submit" class="btn btn-primary w-100">Next: Rate Courses</button>
-            </form>
+    <label class="form-label fw-semibold">Select Courses</label>
+    {% if form.courses.errors %}
+    <div class="text-danger small mb-2">{{ form.courses.errors.0 }}</div>
+    {% endif %}
+    {% for semester, courses in courses_by_semester.items %}
+    <div class="card mb-3">
+        <div class="card-header bg-white fw-semibold">Semester {{ semester }}</div>
+        <div class="card-body">
+            {% for course in courses %}
+            <div class="form-check">
+                <input type="checkbox" class="form-check-input" name="courses" value="{{ course.id }}" id="course_{{ course.id }}">
+                <label class="form-check-label" for="course_{{ course.id }}">{{ course.course_name }} ({{ course.course_code }})</label>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    {% endfor %}
+
+    <button type="submit" class="btn btn-primary w-100">Next: Rate Courses</button>
+</form>
         </div>
     </div>
 </div>
