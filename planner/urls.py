@@ -18,5 +18,7 @@ urlpatterns = [
     path('plan/<int:plan_id>/delete/', views.delete_plan, name='delete_plan'),
     path('topic/<int:topic_id>/questions/', views.topic_questions, name='topic_questions'),
     path('question/<int:question_id>/toggle/', views.toggle_question_practiced, name='toggle_question_practiced'),
-
+    path('profile/', views.profile_view, name='profile'),
+    path('profile/password/', views.change_password, name='change_password'),
+    path('profile/rating/<int:course_id>/', views.update_rating, name='update_rating'),
 ]

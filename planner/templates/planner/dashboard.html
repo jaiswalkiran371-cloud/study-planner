@@ -10,6 +10,30 @@
     <a href="/setup/" class="btn btn-primary">+ Create New Study Plan</a>
 </div>
 
+{% if todays_sessions %}
+<div class="card mb-4">
+    <div class="card-header bg-white fw-semibold">Today's Tasks ({{ todays_sessions|length }})</div>
+    <ul class="list-group list-group-flush">
+    {% for s in todays_sessions %}
+        <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap gap-2">
+            <div>
+                <a href="{% url 'topic_questions' s.topic.id %}" class="text-decoration-none fw-medium">{{ s.topic.name }}</a>
+                <span class="text-muted small"> — {{ s.duration }}h ({{ s.session_type }})</span>
+                <span class="badge bg-{% if s.status == 'missed' %}danger{% else %}secondary{% endif %} ms-1">{{ s.status }}</span>
+            </div>
+            <form method="post" action="{% url 'update_session_status' s.id %}" class="d-inline">
+                {% csrf_token %}
+                <input type="hidden" name="status" value="completed">
+                <button type="submit" class="btn btn-sm btn-success">Complete</button>
+            </form>
+        </li>
+    {% endfor %}
+    </ul>
+</div>
+{% endif %}
+
+
+
 <div class="card shadow-sm">
     <div class="card-header bg-white fw-semibold">Active Study Plans</div>
 

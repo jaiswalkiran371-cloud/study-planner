@@ -13,6 +13,13 @@ from django.views.decorators.http import require_POST
 from django.shortcuts import get_object_or_404
 from django.contrib import messages
 from .models import PYQQuestion, UserQuestionProgress
+from django.contrib.auth.forms import PasswordChangeForm
+from django.contrib.auth import update_session_auth_hash
+
+
+
+
+
 
 def home(request):
     return render(request, 'planner/home.html')
@@ -51,7 +58,12 @@ def logout_view(request):
 @login_required
 def dashboard(request):
     plans = Plan.objects.filter(user=request.user).order_by('-created_at')
-    return render(request, 'planner/dashboard.html', {'plans': plans})
+    todays_sessions = StudySession.objects.filter(
+        plan__user=request.user, date=date.today()
+    ).exclude(status='completed').select_related('topic').order_by('session_type')
+    return render(request, 'planner/dashboard.html', {
+        'plans': plans, 'todays_sessions': todays_sessions
+    })
 
 @login_required
 @require_POST
@@ -293,3 +305,49 @@ def toggle_question_practiced(request, question_id):
     progress.practiced = not progress.practiced
     progress.save()
     return redirect('topic_questions', topic_id=question.topic_id)
+
+
+@login_required
+def profile_view(request):
+    profile, created = StudentProfile.objects.get_or_create(user=request.user)
+    ratings = UserCourseRating.objects.filter(user=request.user).select_related('course')
+    plans = Plan.objects.filter(user=request.user).order_by('-created_at')
+
+    if request.method == 'POST':
+        profile.programme = request.POST.get('programme', profile.programme)
+        profile.semester = request.POST.get('semester', profile.semester)
+        profile.save()
+        messages.success(request, "Profile updated.")
+        return redirect('profile')
+
+    return render(request, 'planner/profile.html', {
+        'profile': profile, 'ratings': ratings, 'plans': plans,
+    })
+
+
+@login_required
+def change_password(request):
+    if request.method == 'POST':
+        form = PasswordChangeForm(request.user, request.POST)
+        if form.is_valid():
+            user = form.save()
+            update_session_auth_hash(request, user)  # keeps them logged in after changing password
+            messages.success(request, "Password changed successfully.")
+            return redirect('profile')
+    else:
+        form = PasswordChangeForm(request.user)
+        for field in form.fields.values():
+            field.widget.attrs.update({'class': 'form-control'})
+    return render(request, 'planner/change_password.html', {'form': form})
+
+
+@login_required
+@require_POST
+def update_rating(request, course_id):
+    course = get_object_or_404(Course, id=course_id)
+    rating = request.POST.get('rating')
+    UserCourseRating.objects.update_or_create(
+        user=request.user, course=course, defaults={'rating': rating}
+    )
+    messages.success(request, f"Updated rating for {course.course_name}.")
+    return redirect('profile')

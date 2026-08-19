@@ -1,0 +1,68 @@
+{% extends 'planner/base.html' %}
+{% block title %}Profile{% endblock %}
+{% block content %}
+
+<h4 class="fw-bold mb-4">Your Profile</h4>
+
+<div class="card mb-4">
+    <div class="card-body">
+        <h6 class="fw-semibold mb-3">Account Details</h6>
+        <p class="mb-1"><strong>Username:</strong> {{ user.username }}</p>
+        <p class="mb-3"><strong>Email:</strong> {{ user.email|default:"Not set" }}</p>
+
+        <form method="post" class="row g-3">
+            {% csrf_token %}
+            <div class="col-md-6">
+                <label class="form-label">Programme</label>
+                <input type="text" name="programme" class="form-control" value="{{ profile.programme }}">
+            </div>
+            <div class="col-md-6">
+                <label class="form-label">Semester</label>
+                <input type="number" name="semester" class="form-control" value="{{ profile.semester }}">
+            </div>
+            <div class="col-12">
+                <button type="submit" class="btn btn-primary btn-sm">Save Changes</button>
+            </div>
+        </form>
+
+        <a href="{% url 'change_password' %}" class="btn btn-outline-secondary btn-sm mt-3">Change Password</a>
+    </div>
+</div>
+
+<div class="card mb-4">
+    <div class="card-header bg-white fw-semibold">Course Ratings</div>
+    <p class="text-muted small mt-2 mb-0">Updating a rating only affects new plans and future missed-session rescheduling — it won't change sessions already in an existing plan.</p>
+    <ul class="list-group list-group-flush">
+    {% for r in ratings %}
+        <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap gap-2">
+            <span>{{ r.course.course_name }} ({{ r.course.course_code }})</span>
+            <form method="post" action="{% url 'update_rating' r.course.id %}" class="d-flex align-items-center gap-2">
+                {% csrf_token %}
+                <input type="number" name="rating" min="0" max="10" value="{{ r.rating }}" class="form-control form-control-sm" style="width: 70px;">
+                <button type="submit" class="btn btn-sm btn-outline-primary">Update</button>
+            </form>
+        </li>
+    {% empty %}
+        <li class="list-group-item text-muted">No courses rated yet.</li>
+    {% endfor %}
+    </ul>
+</div>
+
+<div class="card">
+    <div class="card-header bg-white fw-semibold">Your Study Plans</div>
+    <ul class="list-group list-group-flush">
+    {% for plan in plans %}
+        <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap gap-2">
+            <span>Exam: {{ plan.exam_date }}</span>
+            <div>
+                <a href="{% url 'plan_day_view' plan.id %}" class="btn btn-sm btn-outline-secondary">Day View</a>
+                <a href="{% url 'plan_week_view' plan.id %}" class="btn btn-sm btn-outline-secondary">Week View</a>
+            </div>
+        </li>
+    {% empty %}
+        <li class="list-group-item text-muted">No plans yet.</li>
+    {% endfor %}
+    </ul>
+</div>
+
+{% endblock %}
